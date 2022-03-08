@@ -1,0 +1,6 @@
+framework module Pods_TinecoTrackData {
+  umbrella header "Pods-TinecoTrackData-umbrella.h"
+
+  export *
+  module * { export * }
+}

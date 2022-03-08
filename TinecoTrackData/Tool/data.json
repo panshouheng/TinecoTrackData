@@ -1,0 +1,223 @@
+[{
+  "properties" : {
+    "params" : {
+      "module" : "1",
+      "authTimeZone" : "Asia\/Shanghai",
+      "uid" : "20210603094451_7fcbd84c20dc85d810910d46ba8bd2b9",
+      "authTimespan" : "1646183841127",
+      "status" : "",
+      "authAppkey" : "1538105560006",
+      "accessToken" : "5e675dc5ef89e6294b8e548687665e19",
+      "requestId" : "UMZzR6R7B5d8Fhj60d75ZMlb",
+      "authSign" : "b1e64acd483901ab62c482550e0583f6"
+    },
+    "app_version" : "1.2.1",
+    "manufacturer" : "iOS",
+    "os" : "iOS",
+    "model" : "iPhone8,1",
+    "os_version" : "15.3.1",
+    "lib_version" : "1.2.9",
+    "lib" : "iOS",
+    "request_url" : "https:\/\/qas-gl-CN-api.tineco.com\/v1\/private\/CN\/ZH_CN\/8C3912EC-8E26-4A2B-A78B-B53CB337781A\/global_a\/1.2.1\/appStore\/2\/live\/window",
+    "phone_type" : "iPhone 6s",
+    "request_type" : "GET"
+  },
+  "device_id" : "FE1B7669-BB48-4435-BE69-615FE712F284",
+  "event" : "AppRequst",
+  "time" : 1646183841129,
+  "distinct_id" : "FE1B7669-BB48-4435-BE69-615FE712F284"
+},{
+  "properties" : {
+    "params" : {
+      "userId" : "20210603094451_7fcbd84c20dc85d810910d46ba8bd2b9",
+      "authTimeZone" : "Asia\/Shanghai",
+      "uid" : "20210603094451_7fcbd84c20dc85d810910d46ba8bd2b9",
+      "authTimespan" : "1646183841137",
+      "status" : "",
+      "authAppkey" : "1538105560006",
+      "accessToken" : "5e675dc5ef89e6294b8e548687665e19",
+      "requestId" : "TRAG8Gn2fCI9nYZoXb0BOz3u",
+      "type" : "1001",
+      "authSign" : "6f3a128808de79ba85db000371046d99"
+    },
+    "app_version" : "1.2.1",
+    "manufacturer" : "iOS",
+    "os" : "iOS",
+    "model" : "iPhone8,1",
+    "os_version" : "15.3.1",
+    "lib_version" : "1.2.9",
+    "lib" : "iOS",
+    "request_url" : "https:\/\/qas-gl-CN-api.tineco.com\/v1\/private\/CN\/ZH_CN\/8C3912EC-8E26-4A2B-A78B-B53CB337781A\/global_a\/1.2.1\/appStore\/2\/life\/homepage\/banner",
+    "phone_type" : "iPhone 6s",
+    "request_type" : "GET"
+  },
+  "device_id" : "FE1B7669-BB48-4435-BE69-615FE712F284",
+  "event" : "AppRequst",
+  "time" : 1646183841141,
+  "distinct_id" : "FE1B7669-BB48-4435-BE69-615FE712F284"
+},{
+  "properties" : {
+    "app_version" : "1.2.1",
+    "manufacturer" : "iOS",
+    "os" : "iOS",
+    "model" : "iPhone8,1",
+    "os_version" : "15.3.1",
+    "lib_version" : "1.2.9",
+    "lib" : "iOS",
+    "phone_type" : "iPhone 6s"
+  },
+  "device_id" : "FE1B7669-BB48-4435-BE69-615FE712F284",
+  "event" : "AppStart",
+  "time" : 1646183841733,
+  "distinct_id" : "FE1B7669-BB48-4435-BE69-615FE712F284"
+},{
+  "properties" : {
+    "app_version" : "1.2.1",
+    "manufacturer" : "iOS",
+    "os" : "iOS",
+    "screen_title" : "",
+    "model" : "iPhone8,1",
+    "os_version" : "15.3.1",
+    "lib_version" : "1.2.9",
+    "lib" : "iOS",
+    "phone_type" : "iPhone 6s",
+    "screen_name" : "TinecoWindowTabBarViewController"
+  },
+  "device_id" : "FE1B7669-BB48-4435-BE69-615FE712F284",
+  "event" : "AppViewScreen",
+  "time" : 1646183841840,
+  "distinct_id" : "FE1B7669-BB48-4435-BE69-615FE712F284"
+},{
+  "properties" : {
+    "app_version" : "1.2.1",
+    "manufacturer" : "iOS",
+    "os" : "iOS",
+    "element_type" : "CACountDownButton",
+    "model" : "iPhone8,1",
+    "os_version" : "15.3.1",
+    "lib_version" : "1.2.9",
+    "lib" : "iOS",
+    "element_content" : "获取验证码",
+    "phone_type" : "iPhone 6s",
+    "screen_name" : "CANewLoginViewController"
+  },
+  "device_id" : "FE1B7669-BB48-4435-BE69-615FE712F284",
+  "event" : "AppClick",
+  "time" : 1646184068268,
+  "distinct_id" : "FE1B7669-BB48-4435-BE69-615FE712F284"
+},{
+  "properties" : {
+    "app_version" : "1.2.1",
+    "manufacturer" : "iOS",
+    "os" : "iOS",
+    "model" : "iPhone8,1",
+    "os_version" : "15.3.1",
+    "lib_version" : "1.2.9",
+    "lib" : "iOS",
+    "event_duration" : 290654.65625,
+    "phone_type" : "iPhone 6s"
+  },
+  "device_id" : "FE1B7669-BB48-4435-BE69-615FE712F284",
+  "event" : "AppEnd",
+  "time" : 1646184132389,
+  "distinct_id" : "FE1B7669-BB48-4435-BE69-615FE712F284"
+},{
+  "properties" : {
+    "element_type" : "UICollectionView",
+    "lib" : "iOS",
+    "phone_type" : "iPhone 6s",
+    "element_content" : "image>home_delete-食万-0000-状态： -离线",
+    "app_version" : "1.2.1",
+    "element_position" : "0:2",
+    "os" : "iOS",
+    "lib_version" : "1.2.9",
+    "manufacturer" : "iOS",
+    "os_version" : "15.3.1",
+    "model" : "iPhone8,1",
+    "screen_name" : "TinecoFirstWindowViewController"
+  },
+  "device_id" : "FE1B7669-BB48-4435-BE69-615FE712F284",
+  "event" : "AppClick",
+  "time" : 1646184190592,
+  "distinct_id" : "FE1B7669-BB48-4435-BE69-615FE712F284"
+},{
+  "properties" : {
+    "params" : {
+      "pageSize" : 0,
+      "uid" : "20210603094451_7fcbd84c20dc85d810910d46ba8bd2b9",
+      "accessToken" : "5bfce4b8983b8cad554b5e5dff0a0522",
+      "pageIndex" : 0,
+      "productCode" : "znccg2",
+      "requestId" : "3xohPhg0djPYNSfvBSRaLM6B",
+      "authTimeZone" : "Asia\/Shanghai",
+      "authAppkey" : "1538105560006",
+      "type" : 0,
+      "authTimespan" : "1646184190834",
+      "modelType" : "2",
+      "status" : "",
+      "authSign" : "0fcdec2afbd9dddd283b6015339d9cb4"
+    },
+    "app_version" : "1.2.1",
+    "manufacturer" : "iOS",
+    "os" : "iOS",
+    "model" : "iPhone8,1",
+    "os_version" : "15.3.1",
+    "lib_version" : "1.2.9",
+    "lib" : "iOS",
+    "request_url" : "https:\/\/qas-gl-CN-api.tineco.com\/v1\/private\/CN\/ZH_CN\/8C3912EC-8E26-4A2B-A78B-B53CB337781A\/global_a\/1.2.1\/appStore\/2\/food\/oneHalf\/homepage\/cascadeTags",
+    "phone_type" : "iPhone 6s",
+    "request_type" : "GET"
+  },
+  "device_id" : "FE1B7669-BB48-4435-BE69-615FE712F284",
+  "event" : "AppRequst",
+  "time" : 1646184190843,
+  "distinct_id" : "FE1B7669-BB48-4435-BE69-615FE712F284"
+},{
+  "properties" : {
+    "params" : {
+      "authSign" : "543714c7ea89e4037fc1033ef432011a",
+      "uid" : "20210603094451_7fcbd84c20dc85d810910d46ba8bd2b9",
+      "pageIndex" : 0,
+      "accessToken" : "5bfce4b8983b8cad554b5e5dff0a0522",
+      "authAppkey" : "1538105560006",
+      "type" : 0,
+      "authTimeZone" : "Asia\/Shanghai",
+      "requestId" : "CCv4NgSmidYzdmrbDvoRa65V",
+      "authTimespan" : "1646184190870",
+      "modelType" : "2",
+      "status" : "",
+      "pageSize" : 0
+    },
+    "app_version" : "1.2.1",
+    "manufacturer" : "iOS",
+    "os" : "iOS",
+    "model" : "iPhone8,1",
+    "os_version" : "15.3.1",
+    "lib_version" : "1.2.9",
+    "lib" : "iOS",
+    "request_url" : "https:\/\/qas-gl-CN-api.tineco.com\/v1\/private\/CN\/ZH_CN\/8C3912EC-8E26-4A2B-A78B-B53CB337781A\/global_a\/1.2.1\/appStore\/2\/food\/oneHalf\/banner",
+    "phone_type" : "iPhone 6s",
+    "request_type" : "GET"
+  },
+  "device_id" : "FE1B7669-BB48-4435-BE69-615FE712F284",
+  "event" : "AppRequst",
+  "time" : 1646184190875,
+  "distinct_id" : "FE1B7669-BB48-4435-BE69-615FE712F284"
+},{
+  "properties" : {
+    "app_version" : "1.2.1",
+    "manufacturer" : "iOS",
+    "os" : "iOS",
+    "screen_title" : "",
+    "model" : "iPhone8,1",
+    "os_version" : "15.3.1",
+    "lib_version" : "1.2.9",
+    "lib" : "iOS",
+    "phone_type" : "iPhone 6s",
+    "screen_name" : "TDOHHomeViewController"
+  },
+  "device_id" : "FE1B7669-BB48-4435-BE69-615FE712F284",
+  "event" : "AppViewScreen",
+  "time" : 1646184191707,
+  "distinct_id" : "FE1B7669-BB48-4435-BE69-615FE712F284"
+}]

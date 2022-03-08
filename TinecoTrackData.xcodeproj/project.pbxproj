@@ -7,15 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5127809227D1B2AD00D9224F /* NetworkTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127809127D1B2AD00D9224F /* NetworkTarget.swift */; };
+		5127809427D1F06F00D9224F /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127809327D1F06F00D9224F /* StringEx.swift */; };
 		5191D43427C48DFC004D07D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D43327C48DFC004D07D7 /* AppDelegate.swift */; };
-		5191D43627C48DFC004D07D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D43527C48DFC004D07D7 /* SceneDelegate.swift */; };
-		5191D43827C48DFC004D07D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D43727C48DFC004D07D7 /* ViewController.swift */; };
+		5191D43827C48DFC004D07D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D43727C48DFC004D07D7 /* HomeViewController.swift */; };
 		5191D43B27C48DFC004D07D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5191D43927C48DFC004D07D7 /* Main.storyboard */; };
 		5191D43D27C48DFD004D07D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5191D43C27C48DFD004D07D7 /* Assets.xcassets */; };
 		5191D44027C48DFD004D07D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5191D43E27C48DFD004D07D7 /* LaunchScreen.storyboard */; };
 		5191D44B27C48DFD004D07D7 /* TinecoTrackDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D44A27C48DFD004D07D7 /* TinecoTrackDataTests.swift */; };
 		5191D45527C48DFD004D07D7 /* TinecoTrackDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D45427C48DFD004D07D7 /* TinecoTrackDataUITests.swift */; };
 		5191D45727C48DFD004D07D7 /* TinecoTrackDataUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D45627C48DFD004D07D7 /* TinecoTrackDataUITestsLaunchTests.swift */; };
+		5191D48327C7776B004D07D7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D48227C7776B004D07D7 /* SecondViewController.swift */; };
+		5191D48527C777CB004D07D7 /* OperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D48427C777CB004D07D7 /* OperationView.swift */; };
+		5191D48727C77E4B004D07D7 /* OperationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D48627C77E4B004D07D7 /* OperationViewModel.swift */; };
+		5191D48927C77F24004D07D7 /* OperationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D48827C77F24004D07D7 /* OperationModel.swift */; };
+		519D978B27C8A0EA00D16671 /* OperationViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D978A27C8A0EA00D16671 /* OperationViewProtocol.swift */; };
+		519D978D27C8A11A00D16671 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D978C27C8A11A00D16671 /* Utils.swift */; };
+		519D978F27C8A88600D16671 /* TLToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D978E27C8A88600D16671 /* TLToast.swift */; };
+		519D979327C8AD2900D16671 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D979227C8AD2900D16671 /* SectionHeaderView.swift */; };
+		519D979627C8AF3300D16671 /* SectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D979527C8AF3300D16671 /* SectionCollectionViewCell.swift */; };
+		519D979827CCAB6F00D16671 /* SelectPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D979727CCAB6E00D16671 /* SelectPopView.swift */; };
+		519D979E27CCC50F00D16671 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D979D27CCC50F00D16671 /* SectionModel.swift */; };
+		519D97A127CDB7D800D16671 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D97A027CDB7D800D16671 /* SecondViewModel.swift */; };
+		519D97A527CDBCC800D16671 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D97A427CDBCC800D16671 /* BaseViewController.swift */; };
+		519D97A727CEFA5A00D16671 /* SecondViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D97A627CEFA5A00D16671 /* SecondViewCell.swift */; };
+		519D97A927CEFF2A00D16671 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 519D97A827CEFF2A00D16671 /* data.json */; };
+		519D97AB27CEFFB300D16671 /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D97AA27CEFFB300D16671 /* DataObject.swift */; };
+		519D97AD27CF487900D16671 /* DataDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D97AC27CF487900D16671 /* DataDetailViewController.swift */; };
+		519D97B027CF5CD900D16671 /* DataDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D97AF27CF5CD900D16671 /* DataDetailCell.swift */; };
+		519D97B427D0536A00D16671 /* DataDetailSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D97B327D0536A00D16671 /* DataDetailSection.swift */; };
+		519D97B627D0549B00D16671 /* DataDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D97B527D0549B00D16671 /* DataDetailViewModel.swift */; };
+		519D97B827D0555A00D16671 /* DataDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D97B727D0555A00D16671 /* DataDetailModel.swift */; };
+		519D9BD327D0AD8C00D16671 /* typesdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 519D9BD227D0AD8C00D16671 /* typesdata.json */; };
+		A82A92D7D841772A31144291 /* Pods_TinecoTrackData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8164DD55E5711D5EF3118AC /* Pods_TinecoTrackData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +60,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FFB6BB821CEEEC3F2FE69C0 /* Pods-TinecoTrackData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinecoTrackData.debug.xcconfig"; path = "Target Support Files/Pods-TinecoTrackData/Pods-TinecoTrackData.debug.xcconfig"; sourceTree = "<group>"; };
+		5127809127D1B2AD00D9224F /* NetworkTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTarget.swift; sourceTree = "<group>"; };
+		5127809327D1F06F00D9224F /* StringEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
+		5127809527D1F84D00D9224F /* TinecoTrackData-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TinecoTrackData-Bridging-Header.h"; sourceTree = "<group>"; };
 		5191D43027C48DFC004D07D7 /* TinecoTrackData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinecoTrackData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5191D43327C48DFC004D07D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5191D43527C48DFC004D07D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5191D43727C48DFC004D07D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5191D43727C48DFC004D07D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5191D43A27C48DFC004D07D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5191D43C27C48DFD004D07D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5191D43F27C48DFD004D07D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +76,30 @@
 		5191D45027C48DFD004D07D7 /* TinecoTrackDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinecoTrackDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5191D45427C48DFD004D07D7 /* TinecoTrackDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinecoTrackDataUITests.swift; sourceTree = "<group>"; };
 		5191D45627C48DFD004D07D7 /* TinecoTrackDataUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinecoTrackDataUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5191D48227C7776B004D07D7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5191D48427C777CB004D07D7 /* OperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationView.swift; sourceTree = "<group>"; };
+		5191D48627C77E4B004D07D7 /* OperationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationViewModel.swift; sourceTree = "<group>"; };
+		5191D48827C77F24004D07D7 /* OperationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationModel.swift; sourceTree = "<group>"; };
+		519D978A27C8A0EA00D16671 /* OperationViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationViewProtocol.swift; sourceTree = "<group>"; };
+		519D978C27C8A11A00D16671 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		519D978E27C8A88600D16671 /* TLToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLToast.swift; sourceTree = "<group>"; };
+		519D979227C8AD2900D16671 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		519D979527C8AF3300D16671 /* SectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		519D979727CCAB6E00D16671 /* SelectPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPopView.swift; sourceTree = "<group>"; };
+		519D979D27CCC50F00D16671 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
+		519D97A027CDB7D800D16671 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
+		519D97A427CDBCC800D16671 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		519D97A627CEFA5A00D16671 /* SecondViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewCell.swift; sourceTree = "<group>"; };
+		519D97A827CEFF2A00D16671 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		519D97AA27CEFFB300D16671 /* DataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
+		519D97AC27CF487900D16671 /* DataDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailViewController.swift; sourceTree = "<group>"; };
+		519D97AF27CF5CD900D16671 /* DataDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailCell.swift; sourceTree = "<group>"; };
+		519D97B327D0536A00D16671 /* DataDetailSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailSection.swift; sourceTree = "<group>"; };
+		519D97B527D0549B00D16671 /* DataDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailViewModel.swift; sourceTree = "<group>"; };
+		519D97B727D0555A00D16671 /* DataDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailModel.swift; sourceTree = "<group>"; };
+		519D9BD227D0AD8C00D16671 /* typesdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = typesdata.json; sourceTree = "<group>"; };
+		D8164DD55E5711D5EF3118AC /* Pods_TinecoTrackData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinecoTrackData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F589DD15526174D955351E06 /* Pods-TinecoTrackData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinecoTrackData.release.xcconfig"; path = "Target Support Files/Pods-TinecoTrackData/Pods-TinecoTrackData.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82A92D7D841772A31144291 /* Pods_TinecoTrackData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B6C55046462532D6DCD3010 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8164DD55E5711D5EF3118AC /* Pods_TinecoTrackData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5191D42727C48DFC004D07D7 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +143,8 @@
 				5191D44927C48DFD004D07D7 /* TinecoTrackDataTests */,
 				5191D45327C48DFD004D07D7 /* TinecoTrackDataUITests */,
 				5191D43127C48DFC004D07D7 /* Products */,
+				77528E5A3C475EF22571C267 /* Pods */,
+				4B6C55046462532D6DCD3010 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +162,11 @@
 			isa = PBXGroup;
 			children = (
 				5191D43327C48DFC004D07D7 /* AppDelegate.swift */,
-				5191D43527C48DFC004D07D7 /* SceneDelegate.swift */,
-				5191D43727C48DFC004D07D7 /* ViewController.swift */,
+				519D979127C8ABAD00D16671 /* Tool */,
+				519D979027C8AB8500D16671 /* Home */,
+				519D979F27CDB7AB00D16671 /* Second */,
+				519D97AE27CF5CAF00D16671 /* DataDetail */,
+				519D979427C8AF0500D16671 /* Views */,
 				5191D43927C48DFC004D07D7 /* Main.storyboard */,
 				5191D43C27C48DFD004D07D7 /* Assets.xcassets */,
 				5191D43E27C48DFD004D07D7 /* LaunchScreen.storyboard */,
@@ -127,6 +192,92 @@
 			path = TinecoTrackDataUITests;
 			sourceTree = "<group>";
 		};
+		519D979027C8AB8500D16671 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5191D43727C48DFC004D07D7 /* HomeViewController.swift */,
+				5191D48427C777CB004D07D7 /* OperationView.swift */,
+				5191D48627C77E4B004D07D7 /* OperationViewModel.swift */,
+				5191D48827C77F24004D07D7 /* OperationModel.swift */,
+				519D978A27C8A0EA00D16671 /* OperationViewProtocol.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		519D979127C8ABAD00D16671 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				519D9BD227D0AD8C00D16671 /* typesdata.json */,
+				519D97A827CEFF2A00D16671 /* data.json */,
+				519D978C27C8A11A00D16671 /* Utils.swift */,
+				5127809327D1F06F00D9224F /* StringEx.swift */,
+				519D978E27C8A88600D16671 /* TLToast.swift */,
+				519D97A427CDBCC800D16671 /* BaseViewController.swift */,
+				5127809127D1B2AD00D9224F /* NetworkTarget.swift */,
+				5127809527D1F84D00D9224F /* TinecoTrackData-Bridging-Header.h */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		519D979427C8AF0500D16671 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				519D979C27CCC25F00D16671 /* HeaderView */,
+				519D979B27CCC25200D16671 /* SelectionView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		519D979B27CCC25200D16671 /* SelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				519D979727CCAB6E00D16671 /* SelectPopView.swift */,
+			);
+			path = SelectionView;
+			sourceTree = "<group>";
+		};
+		519D979C27CCC25F00D16671 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				519D979227C8AD2900D16671 /* SectionHeaderView.swift */,
+				519D979527C8AF3300D16671 /* SectionCollectionViewCell.swift */,
+				519D979D27CCC50F00D16671 /* SectionModel.swift */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		519D979F27CDB7AB00D16671 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				5191D48227C7776B004D07D7 /* SecondViewController.swift */,
+				519D97A027CDB7D800D16671 /* SecondViewModel.swift */,
+				519D97A627CEFA5A00D16671 /* SecondViewCell.swift */,
+				519D97AA27CEFFB300D16671 /* DataObject.swift */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		519D97AE27CF5CAF00D16671 /* DataDetail */ = {
+			isa = PBXGroup;
+			children = (
+				519D97AC27CF487900D16671 /* DataDetailViewController.swift */,
+				519D97AF27CF5CD900D16671 /* DataDetailCell.swift */,
+				519D97B327D0536A00D16671 /* DataDetailSection.swift */,
+				519D97B527D0549B00D16671 /* DataDetailViewModel.swift */,
+				519D97B727D0555A00D16671 /* DataDetailModel.swift */,
+			);
+			path = DataDetail;
+			sourceTree = "<group>";
+		};
+		77528E5A3C475EF22571C267 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FFB6BB821CEEEC3F2FE69C0 /* Pods-TinecoTrackData.debug.xcconfig */,
+				F589DD15526174D955351E06 /* Pods-TinecoTrackData.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +285,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5191D45A27C48DFD004D07D7 /* Build configuration list for PBXNativeTarget "TinecoTrackData" */;
 			buildPhases = (
+				6EA34C798661EC4818B795A7 /* [CP] Check Pods Manifest.lock */,
 				5191D42C27C48DFC004D07D7 /* Sources */,
 				5191D42D27C48DFC004D07D7 /* Frameworks */,
 				5191D42E27C48DFC004D07D7 /* Resources */,
+				519D9BD127D0A85000D16671 /* ShellScript */,
+				FA3AC7FCBDFF2E3F4A224330 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,6 +349,7 @@
 				TargetAttributes = {
 					5191D42F27C48DFC004D07D7 = {
 						CreatedOnToolsVersion = 13.2;
+						LastSwiftMigration = 1320;
 					};
 					5191D44527C48DFD004D07D7 = {
 						CreatedOnToolsVersion = 13.2;
@@ -234,6 +389,8 @@
 				5191D44027C48DFD004D07D7 /* LaunchScreen.storyboard in Resources */,
 				5191D43D27C48DFD004D07D7 /* Assets.xcassets in Resources */,
 				5191D43B27C48DFC004D07D7 /* Main.storyboard in Resources */,
+				519D9BD327D0AD8C00D16671 /* typesdata.json in Resources */,
+				519D97A927CEFF2A00D16671 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +410,94 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		519D9BD127D0A85000D16671 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		6EA34C798661EC4818B795A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TinecoTrackData-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA3AC7FCBDFF2E3F4A224330 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TinecoTrackData/Pods-TinecoTrackData-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TinecoTrackData/Pods-TinecoTrackData-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TinecoTrackData/Pods-TinecoTrackData-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5191D42C27C48DFC004D07D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5191D43827C48DFC004D07D7 /* ViewController.swift in Sources */,
+				519D97A727CEFA5A00D16671 /* SecondViewCell.swift in Sources */,
+				519D97AB27CEFFB300D16671 /* DataObject.swift in Sources */,
+				519D97A127CDB7D800D16671 /* SecondViewModel.swift in Sources */,
+				519D979627C8AF3300D16671 /* SectionCollectionViewCell.swift in Sources */,
+				5191D48727C77E4B004D07D7 /* OperationViewModel.swift in Sources */,
+				5191D48327C7776B004D07D7 /* SecondViewController.swift in Sources */,
+				519D979827CCAB6F00D16671 /* SelectPopView.swift in Sources */,
+				519D97B827D0555A00D16671 /* DataDetailModel.swift in Sources */,
+				519D97A527CDBCC800D16671 /* BaseViewController.swift in Sources */,
+				5127809227D1B2AD00D9224F /* NetworkTarget.swift in Sources */,
+				519D97B027CF5CD900D16671 /* DataDetailCell.swift in Sources */,
+				519D97B627D0549B00D16671 /* DataDetailViewModel.swift in Sources */,
+				5191D43827C48DFC004D07D7 /* HomeViewController.swift in Sources */,
+				5191D48927C77F24004D07D7 /* OperationModel.swift in Sources */,
+				519D978B27C8A0EA00D16671 /* OperationViewProtocol.swift in Sources */,
+				519D979E27CCC50F00D16671 /* SectionModel.swift in Sources */,
+				519D979327C8AD2900D16671 /* SectionHeaderView.swift in Sources */,
+				519D97B427D0536A00D16671 /* DataDetailSection.swift in Sources */,
+				519D97AD27CF487900D16671 /* DataDetailViewController.swift in Sources */,
+				5191D48527C777CB004D07D7 /* OperationView.swift in Sources */,
 				5191D43427C48DFC004D07D7 /* AppDelegate.swift in Sources */,
-				5191D43627C48DFC004D07D7 /* SceneDelegate.swift in Sources */,
+				5127809427D1F06F00D9224F /* StringEx.swift in Sources */,
+				519D978F27C8A88600D16671 /* TLToast.swift in Sources */,
+				519D978D27C8A11A00D16671 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +604,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +659,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -434,14 +671,17 @@
 		};
 		5191D45B27C48DFD004D07D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FFB6BB821CEEEC3F2FE69C0 /* Pods-TinecoTrackData.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5S9FUAXV56;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TinecoTrackData/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "食万信息查询";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -455,21 +695,26 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tineco.TinecoTrackData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TinecoTrackData/Tool/TinecoTrackData-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		5191D45C27C48DFD004D07D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F589DD15526174D955351E06 /* Pods-TinecoTrackData.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5S9FUAXV56;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TinecoTrackData/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "食万信息查询";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -483,8 +728,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tineco.TinecoTrackData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TinecoTrackData/Tool/TinecoTrackData-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
