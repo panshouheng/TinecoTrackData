@@ -62,7 +62,6 @@
 		51F1CA9C27E02B570094834F /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1CA9B27E02B570094834F /* APIConfig.swift */; };
 		51F1CA9E27E02C8A0094834F /* MoyaProviderEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1CA9D27E02C8A0094834F /* MoyaProviderEX.swift */; };
 		51F1CAA027E05F420094834F /* SwiftJSONModelAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1CA9F27E05F420094834F /* SwiftJSONModelAble.swift */; };
-		51F1CAA227E05FB40094834F /* RxSwiftJSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1CAA127E05FB40094834F /* RxSwiftJSONError.swift */; };
 		51F1CAAC27E06A8A0094834F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1CAAB27E06A8A0094834F /* LoginViewController.swift */; };
 		A82A92D7D841772A31144291 /* Pods_TinecoTrackData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8164DD55E5711D5EF3118AC /* Pods_TinecoTrackData.framework */; };
 /* End PBXBuildFile section */
@@ -146,7 +145,6 @@
 		51F1CA9B27E02B570094834F /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		51F1CA9D27E02C8A0094834F /* MoyaProviderEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaProviderEX.swift; sourceTree = "<group>"; };
 		51F1CA9F27E05F420094834F /* SwiftJSONModelAble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftJSONModelAble.swift; sourceTree = "<group>"; };
-		51F1CAA127E05FB40094834F /* RxSwiftJSONError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftJSONError.swift; sourceTree = "<group>"; };
 		51F1CAAB27E06A8A0094834F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D8164DD55E5711D5EF3118AC /* Pods_TinecoTrackData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinecoTrackData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F589DD15526174D955351E06 /* Pods-TinecoTrackData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinecoTrackData.release.xcconfig"; path = "Target Support Files/Pods-TinecoTrackData/Pods-TinecoTrackData.release.xcconfig"; sourceTree = "<group>"; };
@@ -264,7 +262,6 @@
 				51F1CA9927E023A50094834F /* BaseTarget.swift */,
 				51F1CA9D27E02C8A0094834F /* MoyaProviderEX.swift */,
 				51F1CA9F27E05F420094834F /* SwiftJSONModelAble.swift */,
-				51F1CAA127E05FB40094834F /* RxSwiftJSONError.swift */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -667,7 +664,6 @@
 				519BDE0827E494ED0018929C /* ResetPasswordViewModel.swift in Sources */,
 				519D97AB27CEFFB300D16671 /* DataObject.swift in Sources */,
 				519D97A127CDB7D800D16671 /* SecondViewModel.swift in Sources */,
-				51F1CAA227E05FB40094834F /* RxSwiftJSONError.swift in Sources */,
 				519D979627C8AF3300D16671 /* SectionCollectionViewCell.swift in Sources */,
 				51F1CA9A27E023A50094834F /* BaseTarget.swift in Sources */,
 				5191D48727C77E4B004D07D7 /* OperationViewModel.swift in Sources */,

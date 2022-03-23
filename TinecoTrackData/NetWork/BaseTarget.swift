@@ -45,7 +45,6 @@ extension BaseTarget {
             } else {
                 headerParams["access_token"] = user.access_token
             }
-            
         }
         return headerParams
     }

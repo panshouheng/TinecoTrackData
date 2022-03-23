@@ -29,7 +29,7 @@ class AccountBindViewModel {
             .catchAndReturn(BaseArrayResponse.init(JSON()))
             .flatMapLatest { resp -> Observable<[BindDeviceModel]> in
                 return Observable.create { ob in
-                    guard  resp.code == 200 else { TLToast.show(resp.message);   return Disposables.create { } }
+                    guard  resp.code == 200 else {  return Disposables.create { } }
                     if resp.data.count == 0 { TLToast.show("暂无数据") }
                     ob.onNext(resp.data)
                     return Disposables.create {}
@@ -47,7 +47,7 @@ class AccountBindViewModel {
             .catchAndReturn(BaseArrayResponse.init(JSON()))
             .flatMapLatest { resp -> Observable<[BindProductModel]> in
                 return Observable.create { ob in
-                    guard  resp.code == 200 else { TLToast.show(resp.message);   return Disposables.create { } }
+                    guard  resp.code == 200 else { return Disposables.create { } }
                     if resp.data.count == 0 { TLToast.show("暂无数据") }
                     ob.onNext(resp.data)
                     return Disposables.create {}

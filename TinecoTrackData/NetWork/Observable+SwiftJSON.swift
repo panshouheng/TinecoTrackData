@@ -17,12 +17,10 @@ extension ObservableType where Element == Moya.Response {
             guard let resp = try? response.filterSuccessfulStatusCodes() else {
                 TLToast.show(response.debugDescription)
                 throw MoyaError.jsonMapping(response)
-//                throw RxSwiftJSONError(domain: response.description, code: response.statusCode, message: response.debugDescription)
             }
             guard let jsonData = try? resp.mapJSON() else {
                 TLToast.show("数据转json失败")
                 throw MoyaError.jsonMapping(response)
-//                throw RxSwiftJSONError(domain: "mapJSON error", code: -1, message: "数据转json失败")
             }
             let object = T(JSON(jsonData))
             TLLog(jsonData)

@@ -37,7 +37,13 @@ class LoginViewModel {
             }
             .flatMapLatest { response -> Observable<BaseResponse<User>> in
                 return Observable.create { ob in
-                    guard  response.code == 200 else { TLToast.show(response.message);   return Disposables.create { } }
+                    guard  response.isOK else {
+                        if ["U10001", "U10002"].contains(response.code) {
+                            TLToast.show(response.message)
+                        }
+                        return Disposables.create { }
+
+                    }
                     response.data.save()
                     ob.onNext(response)
                     return Disposables.create { }

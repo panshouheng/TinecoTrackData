@@ -49,7 +49,7 @@ class LoginViewController: BaseViewController {
             }).disposed(by: rx.disposeBag)
         
         viewModel.signedIn.subscribe { event in
-            guard let res = event.element, res.code == 200 else { return  }
+            guard let res = event.element, res.isOK else { return  }
             let tabbar = MainTabBarController()
             UIApplication.shared.keyWindow?.rootViewController = tabbar
             

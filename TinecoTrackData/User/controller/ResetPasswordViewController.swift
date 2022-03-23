@@ -53,7 +53,7 @@ class ResetPasswordViewController: BaseViewController {
         }).disposed(by: rx.disposeBag)
         
         viewModel.sendFinish.subscribe { event in
-            guard let res = event.element, res.code == 200 else { return  }
+            guard let res = event.element, res.isOK else { return  }
             UIApplication.shared.keyWindow?.rootViewController = UINavigationController(rootViewController: LoginViewController())
         }.disposed(by: rx.disposeBag)
 

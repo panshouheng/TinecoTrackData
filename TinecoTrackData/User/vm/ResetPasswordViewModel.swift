@@ -42,7 +42,12 @@ class ResetPasswordViewModel {
             }
             .flatMapLatest { response -> Observable<BaseResponse<User>> in
                 return Observable.create { ob in
-                    guard  response.code == 200 else { TLToast.show("修改失败");   return Disposables.create { } }
+                    guard  response.isOK else {
+                        if ["U10001", "U10002"].contains(response.code) {
+                            TLToast.show(response.message)
+                        }
+                        return Disposables.create { }
+                    }
                     User.delete()
                     ob.onNext(response)
                     return Disposables.create { }

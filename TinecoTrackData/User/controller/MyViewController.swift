@@ -17,6 +17,7 @@ class MyViewController: BaseViewController {
 
     @IBAction func changePassword(_ sender: Any) {
         let reset = ResetPasswordViewController()
+        reset.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(reset, completion: nil)
     }
     
