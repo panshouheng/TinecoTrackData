@@ -15,7 +15,7 @@ extension ObservableType where Element == Moya.Response {
     func mapModel<T: SwiftJSONModelAble>(_ type: T.Type) -> Observable<T> {
         flatMap { response -> Observable<T> in
             guard let resp = try? response.filterSuccessfulStatusCodes() else {
-                TLToast.show(response.debugDescription)
+                TLToast.show(response.data.string(encoding: String.Encoding.utf8))
                 throw MoyaError.jsonMapping(response)
             }
             guard let jsonData = try? resp.mapJSON() else {

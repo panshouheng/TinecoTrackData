@@ -26,13 +26,14 @@ struct BaseResponse <T: SwiftJSONModelAble>: SwiftJSONModelAble {
 
 struct BaseArrayResponse <T: SwiftJSONModelAble>: SwiftJSONModelAble {
     
-    var code: Int
+    var code: String
     var data: [T]
     var message: String
     var requestId: String
+    var isOK: Bool { return code.elementsEqual("200") }
     
     init(_ jsonData: JSON) {
-        code = jsonData["code"].intValue
+        code = jsonData["code"].stringValue
         message = jsonData["message"].stringValue
         requestId = jsonData["requestId"].stringValue
         data = jsonData["data"].arrayValue.compactMap({ T($0) })

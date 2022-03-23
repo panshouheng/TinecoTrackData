@@ -13,6 +13,8 @@ let AccountBindProvider = MoyaProvider<AccountBindTarget>.initProvider()
 enum AccountBindTarget {
     case bindProduct(mobile: String)
     case bindDevice(mobile: String)
+    case bluetoothSnCode(sn: String)
+    case wifiSnCode(sn: String)
 }
 
 extension AccountBindTarget: BaseTarget {
@@ -23,13 +25,19 @@ extension AccountBindTarget: BaseTarget {
             return "/monitor/account/bind/product"
         case .bindDevice(mobile: _):
             return "/monitor/account/bind/device"
+        case .bluetoothSnCode(sn: _):
+            return "/bluetooth/getBySnCode"
+        case .wifiSnCode(sn: _):
+            return "/wifi/getBySnCode"
         }
     }
     
     var method: Moya.Method {
         switch self {
         case .bindProduct(mobile: _),
-                .bindDevice(mobile: _):
+                .bindDevice(mobile: _),
+                .bluetoothSnCode(sn: _),
+                .wifiSnCode(sn: _):
             return .get
         }
     }
@@ -41,6 +49,10 @@ extension AccountBindTarget: BaseTarget {
             parameters = ["mobile": mobile]
         case .bindDevice(mobile: let mobile):
             parameters = ["mobile": mobile]
+        case .bluetoothSnCode(sn: let sn):
+            parameters = ["sn": sn]
+        case .wifiSnCode(sn: let sn):
+            parameters = ["sn": sn]
         }
         parameters["access_token"] = User.fetch()?.access_token
         return .requestParameters(parameters: parameters, encoding: URLEncoding.default)

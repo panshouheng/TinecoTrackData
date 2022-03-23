@@ -30,26 +30,37 @@ class DeviceListViewController: BaseViewController {
             make.height.equalTo(44)
         }
         
-        tableView.rowHeight = 40
+        tableView.rowHeight = 100
         tableView.register(SecondViewCell.self, forCellReuseIdentifier: NSStringFromClass(SecondViewCell.self))
-        
-        tableView.mj_header = MJRefreshNormalHeader.init()
+        tableView.snp.makeConstraints { make in
+            make.left.right.bottom.equalTo(self.view)
+            make.top.equalTo(header.snp.bottom)
+        }
         
         vm.headers.bind(to: header.rx.titles).disposed(by: rx.disposeBag)
-        if vm.pageType == .BindProduct {
+        switch vm.pageType {
+        case .BindProduct:
             vm.productData.bind(to: tableView.rx.items(cellIdentifier: NSStringFromClass(SecondViewCell.self), cellType: SecondViewCell.self)) { _, model, cell in
                 cell.labelArray[0].text = model.nickname
-                cell.labelArray[1].text = model.type
+                cell.labelArray[1].text = model.systemVersion
                 cell.labelArray[2].text = model.snCode
-                cell.labelArray[3].text = model.productId
+                cell.labelArray[3].text = model.softwareVersion
             }.disposed(by: rx.disposeBag)
-        } else {
+        case .BindDevice:
             vm.deivceData.bind(to: tableView.rx.items(cellIdentifier: NSStringFromClass(SecondViewCell.self), cellType: SecondViewCell.self)) { _, model, cell in
                 cell.labelArray[0].text = model.model
                 cell.labelArray[1].text = model.systemVersion
                 cell.labelArray[2].text = model.deviceNum
                 cell.labelArray[3].text = model.appVersion
             }.disposed(by: rx.disposeBag)
+        case .BluetoothSnCode, .WifiSnCode:
+            vm.snCodeDevices.bind(to: tableView.rx.items(cellIdentifier: NSStringFromClass(SecondViewCell.self), cellType: SecondViewCell.self)) { _, model, cell in
+                cell.labelArray[0].text = model.mobile
+                cell.labelArray[1].text = model.nickname
+                cell.labelArray[2].text = model.identifierId
+                cell.labelArray[3].text = model.username
+            }.disposed(by: rx.disposeBag)
+            
         }
         
         // Do any additional setup after loading the view.

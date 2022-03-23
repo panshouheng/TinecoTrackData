@@ -73,6 +73,7 @@ class OperationView: UIView, OperationViewDelegate {
         inputTextfield.layer.borderColor = UIColor.black.cgColor
         inputTextfield.textColor = UIColor.black
         inputTextfield.font = UIFont.boldSystemFont(ofSize: 16)
+        inputTextfield.text = "18136065160"
         addSubview(inputTextfield)
         
         addSubview(buttonBgView)

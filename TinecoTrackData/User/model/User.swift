@@ -43,16 +43,18 @@ struct User: SwiftJSONModelAble, TableCodable {
 
 extension User {
     
+   static let tableName = "user"
+    
     func save() {
-        try? WCDBManager.shared.dataBase.create(table: "user", of: User.self)
-        try? WCDBManager.shared.dataBase.insertOrReplace(objects: self, intoTable: "user")
+        try? WCDBManager.shared.dataBase.create(table: User.tableName, of: User.self)
+        try? WCDBManager.shared.dataBase.insertOrReplace(objects: self, intoTable: User.tableName)
     }
     static func fetch() -> User? {
-        let user: User? = try? WCDBManager.shared.dataBase.getObject(on: User.Properties.all, fromTable: "user", where: nil, orderBy: nil, offset: 0)
+        let user: User? = try? WCDBManager.shared.dataBase.getObject(on: User.Properties.all, fromTable: tableName, where: nil, orderBy: nil, offset: 0)
         return user
     }
     static func delete() {
-        try? WCDBManager.shared.dataBase.delete(fromTable: "user", where: nil, orderBy: nil, limit: nil, offset: nil)
+        try? WCDBManager.shared.dataBase.delete(fromTable: tableName, where: nil, orderBy: nil, limit: nil, offset: nil)
     }
     
 }

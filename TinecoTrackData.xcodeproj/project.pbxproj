@@ -10,6 +10,7 @@
 		5112370627D99768000FCEA6 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5112370527D99768000FCEA6 /* BaseResponse.swift */; };
 		5127809427D1F06F00D9224F /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127809327D1F06F00D9224F /* StringEx.swift */; };
 		51351E1F27EAE81900110368 /* WCDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51351E1E27EAE81900110368 /* WCDBManager.swift */; };
+		51351E2327EB214400110368 /* SnCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51351E2227EB214400110368 /* SnCodeModel.swift */; };
 		51357ADD27E8546500EAF2F1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51357ADC27E8546500EAF2F1 /* MainTabBarController.swift */; };
 		51357AE227E8593000EAF2F1 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51357AE027E8593000EAF2F1 /* MyViewController.swift */; };
 		51357AE327E8593000EAF2F1 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51357AE127E8593000EAF2F1 /* MyViewController.xib */; };
@@ -89,6 +90,7 @@
 		5127809327D1F06F00D9224F /* StringEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
 		5127809527D1F84D00D9224F /* TinecoTrackData-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TinecoTrackData-Bridging-Header.h"; sourceTree = "<group>"; };
 		51351E1E27EAE81900110368 /* WCDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDBManager.swift; sourceTree = "<group>"; };
+		51351E2227EB214400110368 /* SnCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnCodeModel.swift; sourceTree = "<group>"; };
 		51357ADC27E8546500EAF2F1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		51357AE027E8593000EAF2F1 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		51357AE127E8593000EAF2F1 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 			children = (
 				51357AF127E877C500EAF2F1 /* BindProductModel.swift */,
 				51357AF427E877F400EAF2F1 /* BindDeviceModel.swift */,
+				51351E2227EB214400110368 /* SnCodeModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 				51357AF527E877F400EAF2F1 /* BindDeviceModel.swift in Sources */,
 				513FCB8027DF1AB000AF6F95 /* Observable+SwiftJSON.swift in Sources */,
 				519D97B627D0549B00D16671 /* DataDetailViewModel.swift in Sources */,
+				51351E2327EB214400110368 /* SnCodeModel.swift in Sources */,
 				51357AEF27E870B600EAF2F1 /* DeviceListViewController.swift in Sources */,
 				51452A3127E9C46C0099C5EC /* MJRefresh+RxSwift.swift in Sources */,
 				5191D43827C48DFC004D07D7 /* HomeViewController.swift in Sources */,

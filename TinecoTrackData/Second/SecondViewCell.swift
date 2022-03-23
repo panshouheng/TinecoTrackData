@@ -19,6 +19,7 @@ class SecondViewCell: UITableViewCell {
             label.textColor = .gray
             label.font = .systemFont(ofSize: 14)
             label.textAlignment = .center
+            label.numberOfLines = 0
             contentView.addSubview(label)
             
             label.snp.makeConstraints { make in
@@ -34,15 +35,4 @@ class SecondViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-}
-
-extension Reactive where Base: SecondViewCell {
-    var titles: Binder<BindProductModel> {
-        return Binder(base) { view, model in
-            let values = [model.nickname, model.type, model.snCode, model.productId]
-            for idx in 0..<view.labelArray.count {
-                view.labelArray[idx].text = values[idx]
-            }
-        }
-    }
 }

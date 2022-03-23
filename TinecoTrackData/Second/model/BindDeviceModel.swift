@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+/// 4.手机号查询登录的手机
 struct BindDeviceModel: SwiftJSONModelAble {
     
     let model: String

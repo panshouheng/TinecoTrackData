@@ -19,7 +19,9 @@ extension OperationViewDelegate {
         switch (model.section, buttonConfig.item) {
         case (0, let item):
             guard inputText.isNumeric else { TLToast.show("手机号无效"); return }
-            vc = DeviceListViewController(mobile: inputText, pageType: item==0 ? .BindDevice:.BindProduct)
+            vc = DeviceListViewController(mobile: inputText, pageType: item==0 ? .BindProduct:.BindDevice)
+        case (let section, 0):
+            vc = DeviceListViewController(mobile: inputText, pageType: section==1 ? .BluetoothSnCode:.WifiSnCode)
         case (_, _):
             vc = BaseViewController()
         }
