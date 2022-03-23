@@ -35,7 +35,7 @@
 		5191D48727C77E4B004D07D7 /* OperationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D48627C77E4B004D07D7 /* OperationViewModel.swift */; };
 		5191D48927C77F24004D07D7 /* OperationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D48827C77F24004D07D7 /* OperationModel.swift */; };
 		519BDDFA27E468550018929C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BDDF927E468550018929C /* LoginViewModel.swift */; };
-		519BDE0627E490430018929C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BDE0527E490430018929C /* LoginModel.swift */; };
+		519BDE0627E490430018929C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BDE0527E490430018929C /* User.swift */; };
 		519BDE0827E494ED0018929C /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BDE0727E494ED0018929C /* ResetPasswordViewModel.swift */; };
 		519D978B27C8A0EA00D16671 /* OperationViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D978A27C8A0EA00D16671 /* OperationViewProtocol.swift */; };
 		519D978D27C8A11A00D16671 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D978C27C8A11A00D16671 /* Utils.swift */; };
@@ -118,7 +118,7 @@
 		5191D48627C77E4B004D07D7 /* OperationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationViewModel.swift; sourceTree = "<group>"; };
 		5191D48827C77F24004D07D7 /* OperationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationModel.swift; sourceTree = "<group>"; };
 		519BDDF927E468550018929C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		519BDE0527E490430018929C /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		519BDE0527E490430018929C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		519BDE0727E494ED0018929C /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		519D978A27C8A0EA00D16671 /* OperationViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationViewProtocol.swift; sourceTree = "<group>"; };
 		519D978C27C8A11A00D16671 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -215,7 +215,7 @@
 		51357AEB27E86F1F00EAF2F1 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				519BDE0527E490430018929C /* LoginModel.swift */,
+				519BDE0527E490430018929C /* User.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -474,7 +474,7 @@
 				5191D42D27C48DFC004D07D7 /* Frameworks */,
 				5191D42E27C48DFC004D07D7 /* Resources */,
 				519D9BD127D0A85000D16671 /* ShellScript */,
-				FA3AC7FCBDFF2E3F4A224330 /* [CP] Embed Pods Frameworks */,
+				6644D454D8955A076A563AC5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -613,6 +613,23 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		6644D454D8955A076A563AC5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TinecoTrackData/Pods-TinecoTrackData-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TinecoTrackData/Pods-TinecoTrackData-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TinecoTrackData/Pods-TinecoTrackData-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6EA34C798661EC4818B795A7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -633,23 +650,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FA3AC7FCBDFF2E3F4A224330 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TinecoTrackData/Pods-TinecoTrackData-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TinecoTrackData/Pods-TinecoTrackData-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TinecoTrackData/Pods-TinecoTrackData-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -700,7 +700,7 @@
 				5127809427D1F06F00D9224F /* StringEx.swift in Sources */,
 				51C9606427D8443D00939997 /* AppConfig.swift in Sources */,
 				51357ADD27E8546500EAF2F1 /* MainTabBarController.swift in Sources */,
-				519BDE0627E490430018929C /* LoginModel.swift in Sources */,
+				519BDE0627E490430018929C /* User.swift in Sources */,
 				51F1CAAC27E06A8A0094834F /* LoginViewController.swift in Sources */,
 				51452A2F27E9624E0099C5EC /* ContentView.swift in Sources */,
 				519D978F27C8A88600D16671 /* TLToast.swift in Sources */,

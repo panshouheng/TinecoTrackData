@@ -16,7 +16,7 @@ class ResetPasswordViewModel {
     let validatedNewPassword: Observable<Bool>
     
     let sendEnabled: Observable<Bool>
-    let sendFinish: Observable<BaseResponse<LoginModel>>
+    let sendFinish: Observable<BaseResponse<User>>
     
     static  let userProvider = MoyaProvider<UserTarget>.initProvider()
     
@@ -37,10 +37,10 @@ class ResetPasswordViewModel {
                     .request(.repassword(username: username, password: password, newPassword: newpassword))
                     .retry(1)
                     .asObservable()
-                    .mapModel(BaseResponse<LoginModel>.self)
+                    .mapModel(BaseResponse<User>.self)
                     .catchAndReturn(BaseResponse.init(JSON()))
             }
-            .flatMapLatest { response -> Observable<BaseResponse<LoginModel>> in
+            .flatMapLatest { response -> Observable<BaseResponse<User>> in
                 return Observable.create { ob in
                     guard  response.code == 200 else { TLToast.show("修改失败");   return Disposables.create { } }
                     UserDefaults.standard.removeObject(forKey: "access_token")

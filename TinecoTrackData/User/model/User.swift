@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import WCDBSwift
 
-struct LoginModel: SwiftJSONModelAble {
+struct User: SwiftJSONModelAble, TableCodable {
     
     let access_token: String
     let name: String
@@ -21,6 +22,16 @@ struct LoginModel: SwiftJSONModelAble {
         expire = jsonData["expire"].doubleValue
         username = jsonData["username"].stringValue
         cellphone = jsonData["cellphone"].stringValue
+    }
+    
+    enum CodingKeys: String, CodingTableKey {
+        typealias Root = User
+        static let objectRelationalMapping = TableBinding(CodingKeys.self)
+        case access_token
+        case name
+        case expire
+        case username
+        case cellphone
     }
     
 }

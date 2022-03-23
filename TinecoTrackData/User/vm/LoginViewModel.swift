@@ -15,7 +15,7 @@ class LoginViewModel {
     let validatedPassword: Observable<Bool>
     
     let signupEnabled: Observable<Bool>
-    let signedIn: Observable<BaseResponse<LoginModel>>
+    let signedIn: Observable<BaseResponse<User>>
     
     init(input:(username: Observable<String>,
                 password: Observable<String>,
@@ -32,13 +32,14 @@ class LoginViewModel {
                     .request(.login(username: username, password: password))
                     .retry(1)
                     .asObservable()
-                    .mapModel(BaseResponse<LoginModel>.self)
+                    .mapModel(BaseResponse<User>.self)
                     .catchAndReturn(BaseResponse.init(JSON()))
             }
-            .flatMapLatest { response -> Observable<BaseResponse<LoginModel>> in
+            .flatMapLatest { response -> Observable<BaseResponse<User>> in
                 return Observable.create { ob in
                     guard  response.code == 200 else { TLToast.show(response.message);   return Disposables.create { } }
                     UserDefaults.standard.set(response.data.access_token, forKey: "access_token")
+                    
                     ob.onNext(response)
                     return Disposables.create { }
                 }

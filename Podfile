@@ -10,6 +10,7 @@ pod 'SnapKit'
 pod 'Toast-Swift'
 pod 'MJRefresh'
 pod 'IQKeyboardManagerSwift'
+pod 'WCDB.swift'
 #RxSwiftCommunity
 pod 'Moya/RxSwift'
 pod 'RxSwiftExt'
