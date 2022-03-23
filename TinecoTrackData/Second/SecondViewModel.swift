@@ -49,37 +49,37 @@ class SecondViewModel: NSObject {
     
     func initSourceData () {
         
-        guard let path = Bundle.main.path(forResource: "typesdata", ofType: "json") else { return }
-        let url = URL(fileURLWithPath: path)
-        do {
-            let data = try Data(contentsOf: url)
-            self.model = SectionModel(JSON(data))
-            self.model.event_device_list[0].is_selected = true
-            self.model.event_name_list[0].is_selected = true
-            self.model.event_time_list[0].is_selected = true
-            self.model.event_platform_list[0].is_selected = true
-            self.model.event_version_list[0].is_selected = true
-            headerSourceSubject.accept(self.model.event_selected_list)
-        } catch let error as Error? {
-            print("读取本地数据出现错误!", error as Any)
-        }
+//        guard let path = Bundle.main.path(forResource: "typesdata", ofType: "json") else { return }
+//        let url = URL(fileURLWithPath: path)
+//        do {
+//            let data = try Data(contentsOf: url)
+//            self.model = SectionModel(JSON(data))
+//            self.model.event_device_list[0].is_selected = true
+//            self.model.event_name_list[0].is_selected = true
+//            self.model.event_time_list[0].is_selected = true
+//            self.model.event_platform_list[0].is_selected = true
+//            self.model.event_version_list[0].is_selected = true
+//            headerSourceSubject.accept(self.model.event_selected_list)
+//        } catch let error as Error? {
+//            print("读取本地数据出现错误!", error as Any)
+//        }
     }
     
     func loadDatas() {
-        guard let path = Bundle.main.path(forResource: "data", ofType: "json") else { return }
-        let url = URL(fileURLWithPath: path)
-        do {
-            let data = try Data(contentsOf: url)
-            let jsonData: Any = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-            if let jsonArr = jsonData as? [[String: Any]] {
-                let datas = jsonArr.compactMap { DataObject(JSON($0)) }
-                self.sourceData = jsonArr
-                self.bodyDataSubject.accept(datas)
-            }
-            
-        } catch let error as Error? {
-            print("读取本地数据出现错误!", error as Any)
-        }
+//        guard let path = Bundle.main.path(forResource: "data", ofType: "json") else { return }
+//        let url = URL(fileURLWithPath: path)
+//        do {
+//            let data = try Data(contentsOf: url)
+//            let jsonData: Any = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+//            if let jsonArr = jsonData as? [[String: Any]] {
+//                let datas = jsonArr.compactMap { DataObject(JSON($0)) }
+//                self.sourceData = jsonArr
+//                self.bodyDataSubject.accept(datas)
+//            }
+//            
+//        } catch let error as Error? {
+//            print("读取本地数据出现错误!", error as Any)
+//        }
     }
     
     func getData() {

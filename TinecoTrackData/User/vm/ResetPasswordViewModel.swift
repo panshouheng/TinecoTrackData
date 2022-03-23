@@ -43,7 +43,7 @@ class ResetPasswordViewModel {
             .flatMapLatest { response -> Observable<BaseResponse<User>> in
                 return Observable.create { ob in
                     guard  response.code == 200 else { TLToast.show("修改失败");   return Disposables.create { } }
-                    UserDefaults.standard.removeObject(forKey: "access_token")
+                    User.delete()
                     ob.onNext(response)
                     return Disposables.create { }
                 }

@@ -12,6 +12,7 @@ import Foundation
 @_exported import RxBinding
 @_exported import RxBiBinding
 @_exported import SwiftyJSON
+@_exported import WCDBSwift
 struct AppConfig {
     
 }

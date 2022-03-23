@@ -38,8 +38,7 @@ class LoginViewModel {
             .flatMapLatest { response -> Observable<BaseResponse<User>> in
                 return Observable.create { ob in
                     guard  response.code == 200 else { TLToast.show(response.message);   return Disposables.create { } }
-                    UserDefaults.standard.set(response.data.access_token, forKey: "access_token")
-                    
+                    response.data.save()
                     ob.onNext(response)
                     return Disposables.create { }
                 }

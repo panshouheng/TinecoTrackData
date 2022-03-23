@@ -42,7 +42,7 @@ extension AccountBindTarget: BaseTarget {
         case .bindDevice(mobile: let mobile):
             parameters = ["mobile": mobile]
         }
-        parameters["access_token"] = UserDefaults.standard.string(forKey: "access_token")
+        parameters["access_token"] = User.fetch()?.access_token
         return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
     }
     

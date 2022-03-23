@@ -21,8 +21,7 @@ class MyViewController: BaseViewController {
     }
     
     @IBAction func logout(_ sender: Any) {
-        UserDefaults.standard.removeObject(forKey: "access_token")
-        
+        User.delete()
         UIApplication.shared.keyWindow?.rootViewController = UINavigationController(rootViewController: LoginViewController())
     }
     /*

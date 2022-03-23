@@ -41,7 +41,7 @@ extension UserTarget: BaseTarget {
             parameters = ["username": username, "password": password]
         case .repassword(username: let username, password: let password, newPassword: let newPassword):
             parameters = ["username": username, "password": password, "newPassword": newPassword]
-            parameters["access_token"] = UserDefaults.standard.string(forKey: "access_token")
+            parameters["access_token"] = User.fetch()?.access_token
         }
         return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
     }

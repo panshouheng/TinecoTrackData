@@ -7,6 +7,7 @@
 
 import Foundation
 import Moya
+import UIKit
 
 protocol BaseTarget: TargetType {
     /// The target's base `URL`.
@@ -36,8 +37,15 @@ extension BaseTarget {
     
     var headers: [String: String]? {
         var headerParams = ["Accept": "application/json", "Content-Type": "application/x-www-form-urlencoded"]
-        if let access_token = UserDefaults.standard.string(forKey: "access_token") {
-            headerParams["access_token"] = access_token
+        if let user = User.fetch() {
+            if user.expired {
+                User.delete()
+                UIApplication.shared.keyWindow?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+                TLToast.show("token过期，请重新登陆")
+            } else {
+                headerParams["access_token"] = user.access_token
+            }
+            
         }
         return headerParams
     }
