@@ -6,6 +6,7 @@ disabled_rules: # 执行时排除掉的规则
   - identifier_name    # 命名规则必须按照驼峰原则，与后台传的Json字段命名冲突，建议排除掉
   - trailing_whitespace   # 每一个空行不能有空格，会与Xcode换行后自动对齐生成的空格冲突，建议排除掉
   - force_cast
+  - large_tuple
 
 cyclomatic_complexity: 20 #代码复杂度,默认为10
 

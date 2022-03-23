@@ -46,6 +46,7 @@ class OperationView: UIView, OperationViewDelegate {
     }
     @objc func buttonClick(_ sender: UIButton) {
         guard let model = model else {return}
+        self.endEditing(true)
         self.didSelect(inputTextfield.text, model, model.titles_button[sender.tag])
     }
     convenience init(section: Int) {

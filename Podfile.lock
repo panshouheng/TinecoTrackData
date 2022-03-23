@@ -10,6 +10,12 @@ PODS:
     - RxSwift (~> 6.0)
   - "NSObject+Rx (5.2.2)":
     - RxSwift (~> 6.2)
+  - RxBiBinding (0.3.5):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxBinding (0.5):
+    - RxCocoa (~> 6)
+    - RxSwift (~> 6)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
@@ -62,6 +68,8 @@ DEPENDENCIES:
   - MJRefresh
   - Moya/RxSwift
   - "NSObject+Rx"
+  - RxBiBinding
+  - RxBinding
   - RxDataSources
   - RxSwiftExt
   - SnapKit
@@ -77,6 +85,8 @@ SPEC REPOS:
     - MJRefresh
     - Moya
     - "NSObject+Rx"
+    - RxBiBinding
+    - RxBinding
     - RxCocoa
     - RxDataSources
     - RxRelay
@@ -94,6 +104,8 @@ SPEC CHECKSUMS:
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
+  RxBiBinding: c4de0aad6ee668fa73ea6ba423bc0ab5d77b986b
+  RxBinding: e3c76d02d0ee3f1a306a0fb8e8ef6f2eda65a375
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
@@ -104,6 +116,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 8c3e5db7cf015530f44442656f8877ea20f157af
+PODFILE CHECKSUM: fa6e19d7695b2682dcc181320efb15e47f36e4b2
 
 COCOAPODS: 1.11.2

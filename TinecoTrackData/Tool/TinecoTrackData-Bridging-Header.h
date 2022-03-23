@@ -5,5 +5,5 @@
 #define Bridging_Header_h
 
 #import <CommonCrypto/CommonCrypto.h>
-
+#import <MJRefresh.h>
 #endif /* Bridging_Header_h */

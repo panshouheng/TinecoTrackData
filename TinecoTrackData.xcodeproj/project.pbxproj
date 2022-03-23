@@ -7,8 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5127809227D1B2AD00D9224F /* NetworkTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127809127D1B2AD00D9224F /* NetworkTarget.swift */; };
+		5112370627D99768000FCEA6 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5112370527D99768000FCEA6 /* BaseResponse.swift */; };
 		5127809427D1F06F00D9224F /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5127809327D1F06F00D9224F /* StringEx.swift */; };
+		51357ADD27E8546500EAF2F1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51357ADC27E8546500EAF2F1 /* MainTabBarController.swift */; };
+		51357AE227E8593000EAF2F1 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51357AE027E8593000EAF2F1 /* MyViewController.swift */; };
+		51357AE327E8593000EAF2F1 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51357AE127E8593000EAF2F1 /* MyViewController.xib */; };
+		51357AE527E85E8100EAF2F1 /* AccountBindTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51357AE427E85E8100EAF2F1 /* AccountBindTarget.swift */; };
+		51357AE727E862AF00EAF2F1 /* AccountBindViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51357AE627E862AF00EAF2F1 /* AccountBindViewModel.swift */; };
+		51357AEF27E870B600EAF2F1 /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51357AEE27E870B600EAF2F1 /* DeviceListViewController.swift */; };
+		51357AF227E877C500EAF2F1 /* BindProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51357AF127E877C500EAF2F1 /* BindProductModel.swift */; };
+		51357AF527E877F400EAF2F1 /* BindDeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51357AF427E877F400EAF2F1 /* BindDeviceModel.swift */; };
+		513FCB8027DF1AB000AF6F95 /* Observable+SwiftJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513FCB7F27DF1AB000AF6F95 /* Observable+SwiftJSON.swift */; };
+		513FCB8427DF37BA00AF6F95 /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513FCB8327DF37BA00AF6F95 /* UserTarget.swift */; };
+		51452A2F27E9624E0099C5EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51452A2E27E9624E0099C5EC /* ContentView.swift */; };
+		51452A3127E9C46C0099C5EC /* MJRefresh+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51452A3027E9C46C0099C5EC /* MJRefresh+RxSwift.swift */; };
+		51452A3327E9C8620099C5EC /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51452A3227E9C8620099C5EC /* GlobalConstant.swift */; };
 		5191D43427C48DFC004D07D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D43327C48DFC004D07D7 /* AppDelegate.swift */; };
 		5191D43827C48DFC004D07D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D43727C48DFC004D07D7 /* HomeViewController.swift */; };
 		5191D43B27C48DFC004D07D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5191D43927C48DFC004D07D7 /* Main.storyboard */; };
@@ -21,6 +34,9 @@
 		5191D48527C777CB004D07D7 /* OperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D48427C777CB004D07D7 /* OperationView.swift */; };
 		5191D48727C77E4B004D07D7 /* OperationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D48627C77E4B004D07D7 /* OperationViewModel.swift */; };
 		5191D48927C77F24004D07D7 /* OperationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D48827C77F24004D07D7 /* OperationModel.swift */; };
+		519BDDFA27E468550018929C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BDDF927E468550018929C /* LoginViewModel.swift */; };
+		519BDE0627E490430018929C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BDE0527E490430018929C /* LoginModel.swift */; };
+		519BDE0827E494ED0018929C /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BDE0727E494ED0018929C /* ResetPasswordViewModel.swift */; };
 		519D978B27C8A0EA00D16671 /* OperationViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D978A27C8A0EA00D16671 /* OperationViewProtocol.swift */; };
 		519D978D27C8A11A00D16671 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D978C27C8A11A00D16671 /* Utils.swift */; };
 		519D978F27C8A88600D16671 /* TLToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D978E27C8A88600D16671 /* TLToast.swift */; };
@@ -39,6 +55,14 @@
 		519D97B627D0549B00D16671 /* DataDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D97B527D0549B00D16671 /* DataDetailViewModel.swift */; };
 		519D97B827D0555A00D16671 /* DataDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D97B727D0555A00D16671 /* DataDetailModel.swift */; };
 		519D9BD327D0AD8C00D16671 /* typesdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 519D9BD227D0AD8C00D16671 /* typesdata.json */; };
+		51BBA19727E1D23100558BFF /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBA19627E1D23100558BFF /* ResetPasswordViewController.swift */; };
+		51C9606427D8443D00939997 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9606327D8443D00939997 /* AppConfig.swift */; };
+		51F1CA9A27E023A50094834F /* BaseTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1CA9927E023A50094834F /* BaseTarget.swift */; };
+		51F1CA9C27E02B570094834F /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1CA9B27E02B570094834F /* APIConfig.swift */; };
+		51F1CA9E27E02C8A0094834F /* MoyaProviderEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1CA9D27E02C8A0094834F /* MoyaProviderEX.swift */; };
+		51F1CAA027E05F420094834F /* SwiftJSONModelAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1CA9F27E05F420094834F /* SwiftJSONModelAble.swift */; };
+		51F1CAA227E05FB40094834F /* RxSwiftJSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1CAA127E05FB40094834F /* RxSwiftJSONError.swift */; };
+		51F1CAAC27E06A8A0094834F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1CAAB27E06A8A0094834F /* LoginViewController.swift */; };
 		A82A92D7D841772A31144291 /* Pods_TinecoTrackData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8164DD55E5711D5EF3118AC /* Pods_TinecoTrackData.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,9 +85,22 @@
 
 /* Begin PBXFileReference section */
 		0FFB6BB821CEEEC3F2FE69C0 /* Pods-TinecoTrackData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinecoTrackData.debug.xcconfig"; path = "Target Support Files/Pods-TinecoTrackData/Pods-TinecoTrackData.debug.xcconfig"; sourceTree = "<group>"; };
-		5127809127D1B2AD00D9224F /* NetworkTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTarget.swift; sourceTree = "<group>"; };
+		5112370527D99768000FCEA6 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		5127809327D1F06F00D9224F /* StringEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
 		5127809527D1F84D00D9224F /* TinecoTrackData-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TinecoTrackData-Bridging-Header.h"; sourceTree = "<group>"; };
+		51357ADC27E8546500EAF2F1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		51357AE027E8593000EAF2F1 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		51357AE127E8593000EAF2F1 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		51357AE427E85E8100EAF2F1 /* AccountBindTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBindTarget.swift; sourceTree = "<group>"; };
+		51357AE627E862AF00EAF2F1 /* AccountBindViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBindViewModel.swift; sourceTree = "<group>"; };
+		51357AEE27E870B600EAF2F1 /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
+		51357AF127E877C500EAF2F1 /* BindProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindProductModel.swift; sourceTree = "<group>"; };
+		51357AF427E877F400EAF2F1 /* BindDeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindDeviceModel.swift; sourceTree = "<group>"; };
+		513FCB7F27DF1AB000AF6F95 /* Observable+SwiftJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+SwiftJSON.swift"; sourceTree = "<group>"; };
+		513FCB8327DF37BA00AF6F95 /* UserTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTarget.swift; sourceTree = "<group>"; };
+		51452A2E27E9624E0099C5EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		51452A3027E9C46C0099C5EC /* MJRefresh+RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MJRefresh+RxSwift.swift"; sourceTree = "<group>"; };
+		51452A3227E9C8620099C5EC /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		5191D43027C48DFC004D07D7 /* TinecoTrackData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinecoTrackData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5191D43327C48DFC004D07D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5191D43727C48DFC004D07D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +117,9 @@
 		5191D48427C777CB004D07D7 /* OperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationView.swift; sourceTree = "<group>"; };
 		5191D48627C77E4B004D07D7 /* OperationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationViewModel.swift; sourceTree = "<group>"; };
 		5191D48827C77F24004D07D7 /* OperationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationModel.swift; sourceTree = "<group>"; };
+		519BDDF927E468550018929C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		519BDE0527E490430018929C /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		519BDE0727E494ED0018929C /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		519D978A27C8A0EA00D16671 /* OperationViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationViewProtocol.swift; sourceTree = "<group>"; };
 		519D978C27C8A11A00D16671 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		519D978E27C8A88600D16671 /* TLToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLToast.swift; sourceTree = "<group>"; };
@@ -98,6 +138,14 @@
 		519D97B527D0549B00D16671 /* DataDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailViewModel.swift; sourceTree = "<group>"; };
 		519D97B727D0555A00D16671 /* DataDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailModel.swift; sourceTree = "<group>"; };
 		519D9BD227D0AD8C00D16671 /* typesdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = typesdata.json; sourceTree = "<group>"; };
+		51BBA19627E1D23100558BFF /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		51C9606327D8443D00939997 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		51F1CA9927E023A50094834F /* BaseTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTarget.swift; sourceTree = "<group>"; };
+		51F1CA9B27E02B570094834F /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		51F1CA9D27E02C8A0094834F /* MoyaProviderEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaProviderEX.swift; sourceTree = "<group>"; };
+		51F1CA9F27E05F420094834F /* SwiftJSONModelAble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftJSONModelAble.swift; sourceTree = "<group>"; };
+		51F1CAA127E05FB40094834F /* RxSwiftJSONError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftJSONError.swift; sourceTree = "<group>"; };
+		51F1CAAB27E06A8A0094834F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D8164DD55E5711D5EF3118AC /* Pods_TinecoTrackData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinecoTrackData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F589DD15526174D955351E06 /* Pods-TinecoTrackData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinecoTrackData.release.xcconfig"; path = "Target Support Files/Pods-TinecoTrackData/Pods-TinecoTrackData.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +184,89 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		51357AE827E867F300EAF2F1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				51F1CAAB27E06A8A0094834F /* LoginViewController.swift */,
+				51BBA19627E1D23100558BFF /* ResetPasswordViewController.swift */,
+				51357AE027E8593000EAF2F1 /* MyViewController.swift */,
+				51357AE127E8593000EAF2F1 /* MyViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		51357AE927E86F0200EAF2F1 /* vm */ = {
+			isa = PBXGroup;
+			children = (
+				519BDDF927E468550018929C /* LoginViewModel.swift */,
+				519BDE0727E494ED0018929C /* ResetPasswordViewModel.swift */,
+			);
+			path = vm;
+			sourceTree = "<group>";
+		};
+		51357AEA27E86F0C00EAF2F1 /* target */ = {
+			isa = PBXGroup;
+			children = (
+				513FCB8327DF37BA00AF6F95 /* UserTarget.swift */,
+			);
+			path = target;
+			sourceTree = "<group>";
+		};
+		51357AEB27E86F1F00EAF2F1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				519BDE0527E490430018929C /* LoginModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		51357AEC27E86F8500EAF2F1 /* target */ = {
+			isa = PBXGroup;
+			children = (
+				51357AE427E85E8100EAF2F1 /* AccountBindTarget.swift */,
+			);
+			path = target;
+			sourceTree = "<group>";
+		};
+		51357AED27E86F8E00EAF2F1 /* vm */ = {
+			isa = PBXGroup;
+			children = (
+				51357AE627E862AF00EAF2F1 /* AccountBindViewModel.swift */,
+			);
+			path = vm;
+			sourceTree = "<group>";
+		};
+		51357AF027E870BE00EAF2F1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				51357AEE27E870B600EAF2F1 /* DeviceListViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		51357AF327E877E000EAF2F1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				51357AF127E877C500EAF2F1 /* BindProductModel.swift */,
+				51357AF427E877F400EAF2F1 /* BindDeviceModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		513FCB8727DF3F1A00AF6F95 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				51F1CA9B27E02B570094834F /* APIConfig.swift */,
+				5112370527D99768000FCEA6 /* BaseResponse.swift */,
+				513FCB7F27DF1AB000AF6F95 /* Observable+SwiftJSON.swift */,
+				51F1CA9927E023A50094834F /* BaseTarget.swift */,
+				51F1CA9D27E02C8A0094834F /* MoyaProviderEX.swift */,
+				51F1CA9F27E05F420094834F /* SwiftJSONModelAble.swift */,
+				51F1CAA127E05FB40094834F /* RxSwiftJSONError.swift */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
 		5191D42727C48DFC004D07D7 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +294,9 @@
 			children = (
 				5191D43327C48DFC004D07D7 /* AppDelegate.swift */,
 				519D979127C8ABAD00D16671 /* Tool */,
+				513FCB8727DF3F1A00AF6F95 /* NetWork */,
+				51F1CAA627E061FA0094834F /* Base */,
+				51F1CAA427E061520094834F /* User */,
 				519D979027C8AB8500D16671 /* Home */,
 				519D979F27CDB7AB00D16671 /* Second */,
 				519D97AE27CF5CAF00D16671 /* DataDetail */,
@@ -207,13 +341,9 @@
 		519D979127C8ABAD00D16671 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				519D9BD227D0AD8C00D16671 /* typesdata.json */,
-				519D97A827CEFF2A00D16671 /* data.json */,
-				519D978C27C8A11A00D16671 /* Utils.swift */,
-				5127809327D1F06F00D9224F /* StringEx.swift */,
-				519D978E27C8A88600D16671 /* TLToast.swift */,
-				519D97A427CDBCC800D16671 /* BaseViewController.swift */,
-				5127809127D1B2AD00D9224F /* NetworkTarget.swift */,
+				51F1CAA527E061C00094834F /* Extensions */,
+				51F1CAA727E0621F0094834F /* localjson */,
+				51F1CAA827E062540094834F /* Common */,
 				5127809527D1F84D00D9224F /* TinecoTrackData-Bridging-Header.h */,
 			);
 			path = Tool;
@@ -253,6 +383,11 @@
 				519D97A027CDB7D800D16671 /* SecondViewModel.swift */,
 				519D97A627CEFA5A00D16671 /* SecondViewCell.swift */,
 				519D97AA27CEFFB300D16671 /* DataObject.swift */,
+				51452A2E27E9624E0099C5EC /* ContentView.swift */,
+				51357AF327E877E000EAF2F1 /* model */,
+				51357AF027E870BE00EAF2F1 /* controller */,
+				51357AEC27E86F8500EAF2F1 /* target */,
+				51357AED27E86F8E00EAF2F1 /* vm */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -267,6 +402,55 @@
 				519D97B727D0555A00D16671 /* DataDetailModel.swift */,
 			);
 			path = DataDetail;
+			sourceTree = "<group>";
+		};
+		51F1CAA427E061520094834F /* User */ = {
+			isa = PBXGroup;
+			children = (
+				51357AEA27E86F0C00EAF2F1 /* target */,
+				51357AEB27E86F1F00EAF2F1 /* model */,
+				51357AE927E86F0200EAF2F1 /* vm */,
+				51357AE827E867F300EAF2F1 /* controller */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		51F1CAA527E061C00094834F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5127809327D1F06F00D9224F /* StringEx.swift */,
+				51452A3027E9C46C0099C5EC /* MJRefresh+RxSwift.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		51F1CAA627E061FA0094834F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				51357ADC27E8546500EAF2F1 /* MainTabBarController.swift */,
+				519D97A427CDBCC800D16671 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		51F1CAA727E0621F0094834F /* localjson */ = {
+			isa = PBXGroup;
+			children = (
+				519D9BD227D0AD8C00D16671 /* typesdata.json */,
+				519D97A827CEFF2A00D16671 /* data.json */,
+			);
+			path = localjson;
+			sourceTree = "<group>";
+		};
+		51F1CAA827E062540094834F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				519D978C27C8A11A00D16671 /* Utils.swift */,
+				51C9606327D8443D00939997 /* AppConfig.swift */,
+				519D978E27C8A88600D16671 /* TLToast.swift */,
+				51452A3227E9C8620099C5EC /* GlobalConstant.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		77528E5A3C475EF22571C267 /* Pods */ = {
@@ -388,6 +572,7 @@
 			files = (
 				5191D44027C48DFD004D07D7 /* LaunchScreen.storyboard in Resources */,
 				5191D43D27C48DFD004D07D7 /* Assets.xcassets in Resources */,
+				51357AE327E8593000EAF2F1 /* MyViewController.xib in Resources */,
 				5191D43B27C48DFC004D07D7 /* Main.storyboard in Resources */,
 				519D9BD327D0AD8C00D16671 /* typesdata.json in Resources */,
 				519D97A927CEFF2A00D16671 /* data.json in Resources */,
@@ -475,29 +660,52 @@
 			buildActionMask = 2147483647;
 			files = (
 				519D97A727CEFA5A00D16671 /* SecondViewCell.swift in Sources */,
+				51452A3327E9C8620099C5EC /* GlobalConstant.swift in Sources */,
+				519BDE0827E494ED0018929C /* ResetPasswordViewModel.swift in Sources */,
 				519D97AB27CEFFB300D16671 /* DataObject.swift in Sources */,
 				519D97A127CDB7D800D16671 /* SecondViewModel.swift in Sources */,
+				51F1CAA227E05FB40094834F /* RxSwiftJSONError.swift in Sources */,
 				519D979627C8AF3300D16671 /* SectionCollectionViewCell.swift in Sources */,
+				51F1CA9A27E023A50094834F /* BaseTarget.swift in Sources */,
 				5191D48727C77E4B004D07D7 /* OperationViewModel.swift in Sources */,
+				519BDDFA27E468550018929C /* LoginViewModel.swift in Sources */,
 				5191D48327C7776B004D07D7 /* SecondViewController.swift in Sources */,
+				51357AE227E8593000EAF2F1 /* MyViewController.swift in Sources */,
+				51357AE527E85E8100EAF2F1 /* AccountBindTarget.swift in Sources */,
 				519D979827CCAB6F00D16671 /* SelectPopView.swift in Sources */,
+				5112370627D99768000FCEA6 /* BaseResponse.swift in Sources */,
 				519D97B827D0555A00D16671 /* DataDetailModel.swift in Sources */,
 				519D97A527CDBCC800D16671 /* BaseViewController.swift in Sources */,
-				5127809227D1B2AD00D9224F /* NetworkTarget.swift in Sources */,
 				519D97B027CF5CD900D16671 /* DataDetailCell.swift in Sources */,
+				51357AE727E862AF00EAF2F1 /* AccountBindViewModel.swift in Sources */,
+				51357AF527E877F400EAF2F1 /* BindDeviceModel.swift in Sources */,
+				513FCB8027DF1AB000AF6F95 /* Observable+SwiftJSON.swift in Sources */,
 				519D97B627D0549B00D16671 /* DataDetailViewModel.swift in Sources */,
+				51357AEF27E870B600EAF2F1 /* DeviceListViewController.swift in Sources */,
+				51452A3127E9C46C0099C5EC /* MJRefresh+RxSwift.swift in Sources */,
 				5191D43827C48DFC004D07D7 /* HomeViewController.swift in Sources */,
+				51F1CA9E27E02C8A0094834F /* MoyaProviderEX.swift in Sources */,
 				5191D48927C77F24004D07D7 /* OperationModel.swift in Sources */,
 				519D978B27C8A0EA00D16671 /* OperationViewProtocol.swift in Sources */,
 				519D979E27CCC50F00D16671 /* SectionModel.swift in Sources */,
+				513FCB8427DF37BA00AF6F95 /* UserTarget.swift in Sources */,
 				519D979327C8AD2900D16671 /* SectionHeaderView.swift in Sources */,
 				519D97B427D0536A00D16671 /* DataDetailSection.swift in Sources */,
+				51357AF227E877C500EAF2F1 /* BindProductModel.swift in Sources */,
 				519D97AD27CF487900D16671 /* DataDetailViewController.swift in Sources */,
 				5191D48527C777CB004D07D7 /* OperationView.swift in Sources */,
+				51F1CA9C27E02B570094834F /* APIConfig.swift in Sources */,
+				51BBA19727E1D23100558BFF /* ResetPasswordViewController.swift in Sources */,
 				5191D43427C48DFC004D07D7 /* AppDelegate.swift in Sources */,
 				5127809427D1F06F00D9224F /* StringEx.swift in Sources */,
+				51C9606427D8443D00939997 /* AppConfig.swift in Sources */,
+				51357ADD27E8546500EAF2F1 /* MainTabBarController.swift in Sources */,
+				519BDE0627E490430018929C /* LoginModel.swift in Sources */,
+				51F1CAAC27E06A8A0094834F /* LoginViewController.swift in Sources */,
+				51452A2F27E9624E0099C5EC /* ContentView.swift in Sources */,
 				519D978F27C8A88600D16671 /* TLToast.swift in Sources */,
 				519D978D27C8A11A00D16671 /* Utils.swift in Sources */,
+				51F1CAA027E05F420094834F /* SwiftJSONModelAble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
-import SwiftyJSON
 class DataDetailViewController: BaseViewController {
     
     var viewModel: DataDetailViewModel!
@@ -50,17 +49,17 @@ class DataDetailViewController: BaseViewController {
         } titleForHeaderInSection: { sectionData, index in
             return sectionData[index].title_section.name_chinese
         }
-        viewModel.dataSubject.bind(to: tableView.rx.items(dataSource: dataSource)).disposed(by: bag)
+        viewModel.dataSubject.bind(to: tableView.rx.items(dataSource: dataSource)).disposed(by: rx.disposeBag)
         
         tableView.rx.modelSelected(DataDetailModel.self).subscribe { event in
             guard let model = event.element else { return  }
             UIPasteboard.general.string = model.value
             TLToast.show("复制成功")
-        }.disposed(by: bag)
+        }.disposed(by: rx.disposeBag)
         
         button.rx.tap.subscribe { _ in
             UIPasteboard.general.string = "\(self.data ?? [:])"
             TLToast.show("复制成功")
-        }.disposed(by: bag)
+        }.disposed(by: rx.disposeBag)
 }
 }

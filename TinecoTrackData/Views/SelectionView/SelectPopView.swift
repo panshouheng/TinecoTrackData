@@ -29,7 +29,7 @@ class SelectPopView: UIView {
     static func show(_ location: CGRect, _ dataArray: [SectionItemModel]?, selectClosure: @escaping (_ selectModel: SectionItemModel, _ index: Int) -> Void) {
         guard let window = UIApplication.shared.keyWindow, let dataArray = dataArray else { return }
         window.subviews.filter { $0.isKind(of: SelectPopView.self) }.forEach { $0.removeFromSuperview() }
-        let maxWidth = max(dataArray.map { $0.item_width }.sorted(by: >)[0], Utils.screen_width/5)
+        let maxWidth = max(dataArray.map { $0.item_width }.sorted(by: >)[0], SCREEN_WIDTH/5)
         let locationX = (UIScreen.main.bounds.width - location.minX).float.cgFloat<maxWidth.cgFloat ? (location.maxX.float.cgFloat-maxWidth.cgFloat).float : location.minX.float
         let selectView = SelectPopView(frame: .zero)
         selectView.selectClosure = selectClosure

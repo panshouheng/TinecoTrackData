@@ -48,7 +48,7 @@ class HomeViewController: BaseViewController {
         self.viewModel.sourceDataSubject.subscribe {[weak self] event in
             guard let self = self, let model = event.element else { return  }
             self.views[model.section].model = model
-        }.disposed(by: bag)
+        }.disposed(by: rx.disposeBag)
         
     }
 }

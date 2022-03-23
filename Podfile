@@ -6,7 +6,6 @@ target 'TinecoTrackData' do
 
 pod 'SwiftyJSON'
 pod 'SwifterSwift'
-pod 'RxDataSources'
 pod 'SnapKit'
 pod 'Toast-Swift'
 pod 'MJRefresh'
@@ -15,4 +14,7 @@ pod 'IQKeyboardManagerSwift'
 pod 'Moya/RxSwift'
 pod 'RxSwiftExt'
 pod 'NSObject+Rx'
+pod 'RxDataSources'
+pod 'RxBinding'
+pod 'RxBiBinding'
 end

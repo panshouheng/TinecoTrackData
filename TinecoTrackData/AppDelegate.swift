@@ -17,10 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let window = UIWindow()
         window.frame = UIScreen.main.bounds
-        window.rootViewController = UINavigationController(rootViewController: HomeViewController())
         self.window = window
         window.makeKeyAndVisible()
         IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        if UserDefaults.standard.string(forKey: "access_token") != nil {
+            window.rootViewController = MainTabBarController()
+        } else {
+            window.rootViewController = UINavigationController(rootViewController: LoginViewController())
+        }
         return true
     }
 }

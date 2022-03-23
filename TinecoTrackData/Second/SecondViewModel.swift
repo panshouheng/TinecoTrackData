@@ -10,8 +10,7 @@ import RxCocoa
 import RxSwift
 import SwiftyJSON
 import Moya
-class SecondViewModel {
-    let bag = DisposeBag()
+class SecondViewModel: NSObject {
     
     public var headerSourceSubject = BehaviorRelay<[SectionItemModel]>(value: [])
     public var headerItemSelected = PublishSubject<(IndexPath, CGRect)>()
@@ -21,9 +20,10 @@ class SecondViewModel {
     var sourceData = [[String: Any]]()
     
     var selectedIndex = 0
-    let provider = MoyaProvider<NetworkTarget>()
     
-    init() {
+    override init() {
+        super.init()
+        
         self.initSourceData()
         self.getData()
         headerItemSelected.throttle(.milliseconds(500), scheduler: MainScheduler.instance).subscribe { [weak self] event in
@@ -42,7 +42,7 @@ class SecondViewModel {
                 self.model[indexPath.row][index].is_selected = true
                 self.headerSourceSubject.accept(self.model.event_selected_list)
             }
-        }.disposed(by: bag)
+        }.disposed(by: rx.disposeBag)
         
         loadDatas()
     }
@@ -83,13 +83,9 @@ class SecondViewModel {
     }
     
     func getData() {
-        
-        provider.rx.request(.searchHot(version: "3.0")).subscribe { response in
-            print(response.data.string(encoding: .utf8) as Any)
-        } onFailure: { error in
-            print(error)
-        }.disposed(by: bag)
 
     }
-    
+    deinit {
+        print("viewModel 销毁了")
+    }
 }

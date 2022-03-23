@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwifterSwift
+
 class SecondViewController: BaseViewController {
     
     let viewModel = SecondViewModel()
@@ -14,17 +14,29 @@ class SecondViewController: BaseViewController {
     let section = SectionHeaderView()
     let tableView = UITableView(frame: .zero, style: .plain)
     
+    var mobile: String = ""
+    
+    init(mobile: String) {
+        super.init(nibName: nil, bundle: nil)
+        self.mobile = mobile
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         initViews()
         dataBinding()
+        
     }
     func initViews() {
         view.addSubview(section)
         section.snp.makeConstraints { make in
             make.left.equalToSuperview()
-            make.top.equalTo(Utils.nav_height)
+            make.top.equalTo(NAV_HEIGHT)
         }
         
         view.addSubview(tableView)
@@ -36,8 +48,8 @@ class SecondViewController: BaseViewController {
         }
     }
     func dataBinding() {
-        viewModel.headerSourceSubject.bind(to: section.reloadSubject).disposed(by: bag)
-        section.itemSelected.bind(to: viewModel.headerItemSelected).disposed(by: bag)
+        viewModel.headerSourceSubject.bind(to: section.reloadSubject).disposed(by: rx.disposeBag)
+        section.itemSelected.bind(to: viewModel.headerItemSelected).disposed(by: rx.disposeBag)
         
         viewModel.bodyDataSubject.bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: SecondViewCell.self)) { _, model, cell in
             cell.labelArray[0].text = model.event
@@ -45,13 +57,13 @@ class SecondViewController: BaseViewController {
             cell.labelArray[2].text = model.distinct_id
             cell.labelArray[3].text = model.properties.app_version
             cell.labelArray[4].text = model.properties.os
-        }.disposed(by: bag)
+        }.disposed(by: rx.disposeBag)
         
-        tableView.rx.itemSelected.subscribe { event in
+        tableView.rx.itemSelected.subscribe {[unowned self] event in
             guard let indexPath = event.element else { return  }
             let dataDetail = DataDetailViewController(self.viewModel.sourceData[indexPath.row])
             Utils.currentViewController()?.navigationController?.pushViewController(dataDetail, animated: true)
-        }.disposed(by: bag)
+        }.disposed(by: rx.disposeBag)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -61,6 +73,10 @@ class SecondViewController: BaseViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         SelectPopView.dismiss()
+    }
+    
+    deinit {
+        TLLog("销毁了")
     }
     
     /*

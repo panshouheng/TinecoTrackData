@@ -9,11 +9,10 @@ import Foundation
 import UIKit
 
 struct Utils {
-    static let nav_height = UIApplication.shared.statusBarFrame.height+44
-    static let screen_width = UIScreen.main.bounds.size.width.float
+
 }
 extension Utils {
-    static func currentViewController() -> (UIViewController?) {
+    static func currentViewController() -> UIViewController? {
         var window = UIApplication.shared.keyWindow
         if window?.windowLevel != UIWindow.Level.normal {
             let windows = UIApplication.shared.windows

@@ -7,7 +7,6 @@
 
 import Foundation
 import RxCocoa
-import SwifterSwift
 class DataDetailViewModel {
     
     let dataSource: [String: Any]
