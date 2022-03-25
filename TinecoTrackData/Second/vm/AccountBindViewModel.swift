@@ -105,7 +105,7 @@ class AccountBindViewModel {
                 ob.onNext(resp.data)
                 return Disposables.create {}
             }
-        }.bind(to: self.productData).disposed(by: bag)
+        }.share(replay: 1).bind(to: self.productData).disposed(by: bag)
     }
     
     func requestSnCodeDevices() {
@@ -117,9 +117,5 @@ class AccountBindViewModel {
                 return Disposables.create {}
             }
         }.share(replay: 1).bind(to: self.snCodeDevices).disposed(by: bag)
-    }
-    
-    deinit {
-        print("销毁了")
     }
 }
