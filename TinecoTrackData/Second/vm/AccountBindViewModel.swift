@@ -24,7 +24,7 @@ class AccountBindViewModel {
     private let input: String
     let pageType: PageType
     let headers = BehaviorRelay<[String]>(value: [])
-    
+    let refreshSubject = PublishSubject<MJRefreshAction>()
     let deivceData = BehaviorRelay<[BindDeviceModel]>(value: [])
     let productData = BehaviorRelay<[BindProductModel]>(value: [])
     let snCodeDevices = BehaviorRelay<[SnCodeModel]>(value: [])
@@ -55,9 +55,21 @@ class AccountBindViewModel {
             .catchAndReturn(BaseArrayResponse.init(JSON()))
     }()
     
-    init(input: String, pageType: PageType) {
+    init(input: String, pageType: PageType, refresh: Observable<Void>) {
         self.input = input
         self.pageType = pageType
+        
+        refresh.subscribe { [weak self] _ in
+            switch pageType {
+            case .BindDevice:
+                self?.requestDevice()
+            case .BindProduct:
+                self?.requestProduct()
+            case .BluetoothSnCode, .WifiSnCode:
+                self?.requestSnCodeDevices()
+            }
+        }.disposed(by: bag)
+        
         switch pageType {
         case .BindDevice:
             headers.accept(["手机型号", "系统版本", "手机UUID", "应用版本号"])
@@ -92,9 +104,14 @@ class AccountBindViewModel {
                 guard  resp.isOK else {  return Disposables.create { } }
                 if resp.data.count == 0 { TLToast.show("暂无数据") }
                 ob.onNext(resp.data)
+                self.refreshSubject.onNext(.stopRefresh)
                 return Disposables.create {}
             }
-        }.share(replay: 1).bind(to: self.deivceData).disposed(by: bag)
+        }.subscribe {[weak self] event in
+            guard let ev = event.element else {  return }
+            self?.deivceData.accept(ev)
+            self?.refreshSubject.onNext(.stopRefresh)
+        }.disposed(by: bag)
     }
     
     func requestProduct() {
@@ -105,7 +122,11 @@ class AccountBindViewModel {
                 ob.onNext(resp.data)
                 return Disposables.create {}
             }
-        }.share(replay: 1).bind(to: self.productData).disposed(by: bag)
+        }.subscribe {[weak self] event in
+            guard let ev = event.element else {  return }
+            self?.productData.accept(ev)
+            self?.refreshSubject.onNext(.stopRefresh)
+        }.disposed(by: bag)
     }
     
     func requestSnCodeDevices() {
@@ -114,8 +135,17 @@ class AccountBindViewModel {
                 guard  resp.isOK else {  return Disposables.create { } }
                 if resp.data.count == 0 { TLToast.show("暂无数据") }
                 ob.onNext(resp.data)
+                self.refreshSubject.onNext(.stopRefresh)
                 return Disposables.create {}
             }
-        }.share(replay: 1).bind(to: self.snCodeDevices).disposed(by: bag)
+        }.subscribe {[weak self] event in
+            guard let ev = event.element else {  return }
+            self?.snCodeDevices.accept(ev)
+            self?.refreshSubject.onNext(.stopRefresh)
+        }.disposed(by: bag)
+    }
+    
+    deinit {
+        TLLog("销毁了")
     }
 }

@@ -27,7 +27,7 @@ extension ObservableType where Element == Moya.Response {
                 throw MoyaError.jsonMapping(response)
             }
             let object = T(JSON(jsonData))
-            TLLog(jsonData)
+//            TLLog(jsonData)
             return Observable.just(object)
         }
     }

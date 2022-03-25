@@ -1,17 +1,18 @@
 //
 //  MJRefresh+RxSwift.swift
-//  TinecoTrackData
+//  Demo
 //
-//  Created by psh on 2022/3/22.
+//  Created by Yuri on 2020/6/17.
+//  Copyright © 2020 WSJC. All rights reserved.
 //
 
 import UIKit
-import MJRefresh
 import RxSwift
 import RxCocoa
- 
-class RxTarget: NSObject, Disposable {  // RxTarget 是 Rxswift 源码
-    private var retainSelf: RxTarget?
+import MJRefresh
+
+class Target: NSObject, Disposable {
+    private var retainSelf: Target?
     override init() {
         super.init()
         self.retainSelf = self
@@ -20,45 +21,69 @@ class RxTarget: NSObject, Disposable {  // RxTarget 是 Rxswift 源码
         self.retainSelf = nil
     }
 }
- 
-final class RefreshTarget<Component: MJRefreshComponent>: RxTarget {
-    typealias Callback = MJRefreshComponentAction
-    var callback: Callback?
+
+private final
+class MJRefreshTarget<Component: MJRefreshComponent>: Target {
+    typealias CallBack = (MJRefreshState) -> Void
+    /// 组件
     weak var component: Component?
- 
-    let selector = #selector(RefreshTarget.eventHandler)
- 
-    init(_ component: Component, callback: @escaping Callback) {
-        self.callback = callback
+    /// 回调
+    let callBack: CallBack
+    
+    var kvoToken: NSKeyValueObservation?
+    
+    init(_ component: Component, callBack: @escaping CallBack) {
+        self.callBack = callBack
         self.component = component
         super.init()
-        component.setRefreshingTarget(self, refreshingAction: selector)
+        component.addObserver(self, forKeyPath: "state", options: [.new], context: nil)
     }
-    @objc func eventHandler() {
-        if let callback = self.callback {
-            callback()
-        }
-    }
+    
     override func dispose() {
         super.dispose()
-        self.component?.refreshingBlock = nil
-        self.callback = nil
+        self.component?.removeObserver(self, forKeyPath: "state")
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "state",
+           let new = change?[NSKeyValueChangeKey.newKey] as? Int ,
+           let state = MJRefreshState.init(rawValue: new) {
+            self.callBack(state)
+        }
+    }
+    
+    deinit {
+        print("deinit")
     }
 }
- 
+
 extension Reactive where Base: MJRefreshComponent {
-    var event: ControlEvent<Base> {
-        let source: Observable<Base> = Observable.create { [weak control = self.base] observer  in
+    
+    /// 刷新
+    var refresh: ControlEvent<Void> {
+        let source = state.filter({$0 == .refreshing})
+            .map({_ in ()}).asObservable()
+        return ControlEvent.init(events: source)
+    }
+    
+    /// 刷新状态
+    var state: ControlProperty<MJRefreshState> {
+        let source: Observable<MJRefreshState> = Observable.create { [weak component = self.base] observer  in
             MainScheduler.ensureExecutingOnScheduler()
-            guard let control = control else {
+            guard let component = component else {
                 observer.on(.completed)
                 return Disposables.create()
             }
-            let observer = RefreshTarget(control) {
-                observer.on(.next(control))
+            observer.on(.next(component.state))
+            let target = MJRefreshTarget(component) { (state) in
+                observer.onNext(state)
             }
-            return observer
+            return target
         }.take(until: deallocated)
-        return ControlEvent(events: source)
+        
+        let bindingObserver = Binder<MJRefreshState>(self.base) { (component, state) in
+            component.state = state
+        }
+        return ControlProperty(values: source, valueSink: bindingObserver)
     }
 }

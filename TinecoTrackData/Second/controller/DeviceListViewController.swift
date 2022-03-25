@@ -6,16 +6,21 @@
 //
 
 import UIKit
+import MJRefresh
 
 class DeviceListViewController: BaseViewController {
     
     var vm: AccountBindViewModel?
     let header = ContentView(frame: .zero)
     let tableView = UITableView(frame: .zero, style: .plain)
-    
+    let refreshHeader = MJRefreshNormalHeader()
     convenience init(mobile: String, pageType: PageType) {
         self.init(nibName: nil, bundle: nil)
-        vm = AccountBindViewModel(input: mobile, pageType: pageType)
+        vm = AccountBindViewModel(input: mobile, pageType: pageType, refresh: refreshHeader.rx.refresh.asObservable())
+    }
+    
+    deinit {
+        TLLog("销毁了")
     }
     
     override func viewDidLoad() {
@@ -32,12 +37,14 @@ class DeviceListViewController: BaseViewController {
         
         tableView.rowHeight = 100
         tableView.register(SecondViewCell.self, forCellReuseIdentifier: NSStringFromClass(SecondViewCell.self))
+        tableView.mj_header = refreshHeader
         tableView.snp.makeConstraints { make in
             make.left.right.bottom.equalTo(self.view)
             make.top.equalTo(header.snp.bottom)
         }
-        
-        vm.headers.bind(to: header.rx.titles).disposed(by: rx.disposeBag)
+        vm.headers ~> header.rx.titles ~ rx.disposeBag
+        vm.refreshSubject ~> tableView.rx.refreshAction ~ rx.disposeBag
+
         switch vm.pageType {
         case .BindDevice:
             vm.deivceData.bind(to: tableView.rx.items(cellIdentifier: NSStringFromClass(SecondViewCell.self), cellType: SecondViewCell.self)) { _, model, cell in
@@ -62,7 +69,6 @@ class DeviceListViewController: BaseViewController {
             }.disposed(by: rx.disposeBag)
             
         }
-        
         // Do any additional setup after loading the view.
     }
     
