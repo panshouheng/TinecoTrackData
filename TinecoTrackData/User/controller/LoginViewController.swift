@@ -42,7 +42,7 @@ class LoginViewController: BaseViewController {
         let viewModel = LoginViewModel(input: (username: usernameTextField.rx.text.orEmpty.asObservable(),
                                                password: passwordTextField.rx.text.orEmpty.asObservable(),
                                                loginTap: sendButton.rx.tap.asObservable()))
-        viewModel.signupEnabled
+        viewModel.signInEnabled
             .subscribe(onNext: { [weak self] valid  in
                 self?.sendButton.isEnabled = valid
                 self?.sendButton.alpha = valid ? 1.0 : 0.3

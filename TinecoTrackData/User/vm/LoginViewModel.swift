@@ -14,7 +14,7 @@ class LoginViewModel {
     let validatedUsername: Observable<Bool>
     let validatedPassword: Observable<Bool>
     
-    let signupEnabled: Observable<Bool>
+    let signInEnabled: Observable<Bool>
     let signedIn: Observable<BaseResponse<User>>
     
     init(input:(username: Observable<String>,
@@ -23,7 +23,7 @@ class LoginViewModel {
     ) {
         validatedUsername = input.username.map { $0.count > 4 }.share(replay: 1)
         validatedPassword = input.password.map { $0.count > 5 }.share(replay: 1)
-        signupEnabled = Observable.combineLatest(validatedUsername, validatedPassword) { $0 && $1 }.distinctUntilChanged().share(replay: 1)
+        signInEnabled = Observable.combineLatest(validatedUsername, validatedPassword) { $0 && $1 }.distinctUntilChanged().share(replay: 1)
         
         let usernameAndPassword = Observable.combineLatest(input.username, input.password) { (username: $0, password: $1) }
         signedIn = input.loginTap.withLatestFrom(usernameAndPassword)
