@@ -25,6 +25,10 @@ class MyViewController: BaseViewController {
         User.delete()
         UIApplication.shared.keyWindow?.rootViewController = UINavigationController(rootViewController: LoginViewController())
     }
+    
+    deinit {
+        TLLog("销毁了")
+    }
     /*
     // MARK: - Navigation
 

@@ -14,6 +14,7 @@ class ResetPasswordViewController: BaseViewController {
     let passwordTextField = UITextField.create(placeholder: "密码")
     let newpasswordTextField = UITextField.create(placeholder: "新密码")
     let sendButton = UIButton(type: .custom)
+    var viewModel: ResetPasswordViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,21 +43,25 @@ class ResetPasswordViewController: BaseViewController {
             make.top.equalTo(newpasswordTextField.snp.bottom).offset(20)
         }
         
-        let viewModel = ResetPasswordViewModel(input: (username: usernameTextField.rx.text.orEmpty.asObservable(),
+        viewModel = ResetPasswordViewModel(input: (username: usernameTextField.rx.text.orEmpty.asObservable(),
                                                             password: passwordTextField.rx.text.orEmpty.asObservable(),
                                                             newpassword: newpasswordTextField.rx.text.orEmpty.asObservable(),
                                                        sendTap: sendButton.rx.tap.asObservable()))
         
-        viewModel.sendEnabled.subscribe(onNext: { [weak self] valid  in
+        viewModel?.sendEnabled.subscribe(onNext: { [weak self] valid  in
             self?.sendButton.isEnabled = valid
             self?.sendButton.alpha = valid ? 1.0 : 0.3
         }).disposed(by: rx.disposeBag)
         
-        viewModel.sendFinish.subscribe { event in
+        viewModel?.sendFinish.subscribe { event in
             guard let res = event.element, res.isOK else { return  }
             UIApplication.shared.keyWindow?.rootViewController = UINavigationController(rootViewController: LoginViewController())
         }.disposed(by: rx.disposeBag)
 
+    }
+    
+    deinit {
+        TLLog("销毁了")
     }
     /*
     // MARK: - Navigation

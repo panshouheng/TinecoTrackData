@@ -43,7 +43,7 @@ class ResetPasswordViewModel {
             .flatMapLatest { response -> Observable<BaseResponse<User>> in
                 return Observable.create { ob in
                     guard  response.isOK else {
-                        if ["U10001", "U10002"].contains(response.code) {
+                        if response.code.contains("U") {
                             TLToast.show(response.message)
                         }
                         return Disposables.create { }
@@ -54,5 +54,7 @@ class ResetPasswordViewModel {
                 }
             }.share(replay: 1)
     }
-    
+    deinit {
+        TLLog("销毁了")
+    }
 }

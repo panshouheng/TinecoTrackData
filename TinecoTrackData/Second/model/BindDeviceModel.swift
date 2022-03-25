@@ -23,7 +23,7 @@ struct BindDeviceModel: SwiftJSONModelAble {
     let appCode: String
     
     init(_ jsonData: JSON) {
-        model = jsonData["model"].stringValue
+        model = jsonData["model"].stringValue.phone
         deviceType = jsonData["deviceType"].stringValue
         appVersion = jsonData["appVersion"].stringValue
         systemVersion = jsonData["systemVersion"].stringValue
