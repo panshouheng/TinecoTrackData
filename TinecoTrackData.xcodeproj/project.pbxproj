@@ -25,6 +25,7 @@
 		51452A3327E9C8620099C5EC /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51452A3227E9C8620099C5EC /* GlobalConstant.swift */; };
 		5161A5E727ED52EE004EC7EF /* MJRefresh+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5161A5E527ED52EE004EC7EF /* MJRefresh+RxSwift.swift */; };
 		5161A5E827ED52EE004EC7EF /* UIScrollView+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5161A5E627ED52EE004EC7EF /* UIScrollView+RxSwift.swift */; };
+		5161A5EC27ED9D9A004EC7EF /* DataFormatterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5161A5EB27ED9D9A004EC7EF /* DataFormatterModel.swift */; };
 		5191D43427C48DFC004D07D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D43327C48DFC004D07D7 /* AppDelegate.swift */; };
 		5191D43827C48DFC004D07D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191D43727C48DFC004D07D7 /* HomeViewController.swift */; };
 		5191D43B27C48DFC004D07D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5191D43927C48DFC004D07D7 /* Main.storyboard */; };
@@ -106,6 +107,7 @@
 		51452A3227E9C8620099C5EC /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		5161A5E527ED52EE004EC7EF /* MJRefresh+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MJRefresh+RxSwift.swift"; sourceTree = "<group>"; };
 		5161A5E627ED52EE004EC7EF /* UIScrollView+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+RxSwift.swift"; sourceTree = "<group>"; };
+		5161A5EB27ED9D9A004EC7EF /* DataFormatterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormatterModel.swift; sourceTree = "<group>"; };
 		5191D43027C48DFC004D07D7 /* TinecoTrackData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinecoTrackData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5191D43327C48DFC004D07D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5191D43727C48DFC004D07D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				51357AF127E877C500EAF2F1 /* BindProductModel.swift */,
 				51357AF427E877F400EAF2F1 /* BindDeviceModel.swift */,
 				51351E2227EB214400110368 /* SnCodeModel.swift */,
+				5161A5EB27ED9D9A004EC7EF /* DataFormatterModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				5191D43827C48DFC004D07D7 /* HomeViewController.swift in Sources */,
 				51F1CA9E27E02C8A0094834F /* MoyaProviderEX.swift in Sources */,
 				5191D48927C77F24004D07D7 /* OperationModel.swift in Sources */,
+				5161A5EC27ED9D9A004EC7EF /* DataFormatterModel.swift in Sources */,
 				5161A5E727ED52EE004EC7EF /* MJRefresh+RxSwift.swift in Sources */,
 				519D978B27C8A0EA00D16671 /* OperationViewProtocol.swift in Sources */,
 				519D979E27CCC50F00D16671 /* SectionModel.swift in Sources */,

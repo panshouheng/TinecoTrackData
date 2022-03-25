@@ -11,9 +11,13 @@ import Moya
 let AccountBindProvider = MoyaProvider<AccountBindTarget>.initProvider()
 
 enum AccountBindTarget {
+    /// 手机号查询绑定信息
     case bindProduct(mobile: String)
+    /// 手机号查询登录的手机
     case bindDevice(mobile: String)
+    /// 蓝牙sn查询绑定的账号
     case bluetoothSnCode(sn: String)
+    /// wifi sn查询绑定的账号
     case wifiSnCode(sn: String)
 }
 

@@ -10,12 +10,19 @@ import sqlcipher
 
 struct SnCodeModel: SwiftJSONModelAble {
     
+    /// 用户id
     let identifierId: String
+    /// 用户昵称
     let nickname: String
+    /// 添可id
     let username: String
+    /// 手机号
     let mobile: String
+    /// 是否内部用户
     let internalUser: Bool
+    /// 邮箱
     let email: String
+    /// 注册地区/国家
     let registerArea: String
     
     init(_ jsonData: JSON) {
