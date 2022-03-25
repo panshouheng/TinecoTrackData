@@ -6,7 +6,7 @@
 //
 
 import Foundation
-///3.手机号查询绑定信息
+/// 手机号查询绑定信息
 struct BindProductModel: SwiftJSONModelAble {
     
     let nickname: String

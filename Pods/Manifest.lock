@@ -10,6 +10,7 @@ PODS:
     - RxSwift (~> 6.0)
   - "NSObject+Rx (5.2.2)":
     - RxSwift (~> 6.2)
+  - ReachabilitySwift (5.0.0)
   - RxBiBinding (0.3.5):
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
@@ -23,6 +24,13 @@ PODS:
     - Differentiator (~> 5.0)
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
+  - RxGesture (4.0.3):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxReachability (1.2.1):
+    - ReachabilitySwift (< 6.0, >= 5.0)
+    - RxCocoa (~> 6)
+    - RxSwift (~> 6)
   - RxRelay (6.2.0):
     - RxSwift (= 6.2.0)
   - RxSwift (6.2.0)
@@ -77,6 +85,8 @@ DEPENDENCIES:
   - RxBiBinding
   - RxBinding
   - RxDataSources
+  - RxGesture
+  - RxReachability
   - RxSwiftExt
   - SnapKit
   - SwifterSwift
@@ -92,10 +102,13 @@ SPEC REPOS:
     - MJRefresh
     - Moya
     - "NSObject+Rx"
+    - ReachabilitySwift
     - RxBiBinding
     - RxBinding
     - RxCocoa
     - RxDataSources
+    - RxGesture
+    - RxReachability
     - RxRelay
     - RxSwift
     - RxSwiftExt
@@ -114,10 +127,13 @@ SPEC CHECKSUMS:
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   RxBiBinding: c4de0aad6ee668fa73ea6ba423bc0ab5d77b986b
   RxBinding: e3c76d02d0ee3f1a306a0fb8e8ef6f2eda65a375
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxGesture: abadd243fc36db74df43dfc893829ddde94f1a3d
+  RxReachability: bfd13548bf1dac7a877082d13918a9f39bdb5c18
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
@@ -129,6 +145,6 @@ SPEC CHECKSUMS:
   WCDB.swift: 05d509d7a0e60fb6e11c34eb7e4027c0fab5849f
   WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
 
-PODFILE CHECKSUM: b87dc3a5615a6c5d97dd4937f9753477482cee71
+PODFILE CHECKSUM: 51146c47d6b34d223fdc976a85c5beeb4e94221d
 
 COCOAPODS: 1.11.2

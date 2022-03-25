@@ -6,14 +6,14 @@
 //
 
 import UIKit
-import RxSwift
+
 class SecondViewCell: UITableViewCell {
-    
+
     var labelArray = [UILabel]()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+        self.selectionStyle = .none
         for index in 0...3 {
             let label = UILabel()
             label.textColor = .gray
@@ -34,5 +34,4 @@ class SecondViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
