@@ -47,7 +47,7 @@ class DeviceListViewController: BaseViewController {
 
         switch vm.pageType {
         case .BindDevice:
-            vm.deivceData.bind(to: tableView.rx.items(cellIdentifier: NSStringFromClass(SecondViewCell.self), cellType: SecondViewCell.self)) { _, model, cell in
+            vm.deviceData.bind(to: tableView.rx.items(cellIdentifier: NSStringFromClass(SecondViewCell.self), cellType: SecondViewCell.self)) { _, model, cell in
                 cell.labelArray[0].text = model.model
                 cell.labelArray[1].text = model.systemVersion
                 cell.labelArray[2].text = model.deviceNum

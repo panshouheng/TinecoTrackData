@@ -8,6 +8,7 @@ disabled_rules: # 执行时排除掉的规则
   - force_cast
   - large_tuple
   - nesting
+  - block_based_kvo
 
 cyclomatic_complexity: 20 #代码复杂度,默认为10
 

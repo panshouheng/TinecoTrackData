@@ -25,11 +25,11 @@ class AccountBindViewModel {
     let pageType: PageType
     let headers = BehaviorRelay<[String]>(value: [])
     let refreshSubject = PublishSubject<MJRefreshAction>()
-    let deivceData = BehaviorRelay<[BindDeviceModel]>(value: [])
+    let deviceData = BehaviorRelay<[BindDeviceModel]>(value: [])
     let productData = BehaviorRelay<[BindProductModel]>(value: [])
     let snCodeDevices = BehaviorRelay<[SnCodeModel]>(value: [])
     
-    private lazy var deivceDataRequest: Observable<BaseArrayResponse<BindDeviceModel>> = {
+    private lazy var deviceDataRequest: Observable<BaseArrayResponse<BindDeviceModel>> = {
         AccountBindProvider
             .rx
             .request(.bindDevice(mobile: self.input))
@@ -99,48 +99,25 @@ class AccountBindViewModel {
     }
     
     func requestDevice() {
-        self.deivceDataRequest.flatMapLatest { resp -> Observable<[BindDeviceModel]> in
-            return Observable.create { ob in
-                guard  resp.isOK else {  return Disposables.create { } }
-                if resp.data.count == 0 { TLToast.show("暂无数据") }
-                ob.onNext(resp.data)
-                self.refreshSubject.onNext(.stopRefresh)
-                return Disposables.create {}
-            }
-        }.subscribe {[weak self] event in
-            guard let ev = event.element else {  return }
-            self?.deivceData.accept(ev)
+        self.deviceDataRequest.subscribe {[weak self] event in
+            guard let resp = event.element else { return  }
+            self?.deviceData.accept(resp.data)
             self?.refreshSubject.onNext(.stopRefresh)
         }.disposed(by: bag)
     }
     
     func requestProduct() {
-        self.productDataRequest.flatMapLatest { resp -> Observable<[BindProductModel]> in
-            return Observable.create { ob in
-                guard  resp.isOK else { return Disposables.create { } }
-                if resp.data.count == 0 { TLToast.show("暂无数据") }
-                ob.onNext(resp.data)
-                return Disposables.create {}
-            }
-        }.subscribe {[weak self] event in
-            guard let ev = event.element else {  return }
-            self?.productData.accept(ev)
+        self.productDataRequest.subscribe {[weak self] event in
+            guard let resp = event.element else { return  }
+            self?.productData.accept(resp.data)
             self?.refreshSubject.onNext(.stopRefresh)
         }.disposed(by: bag)
     }
     
     func requestSnCodeDevices() {
-        self.snCodeDevicesRequest.flatMapLatest { resp -> Observable<[SnCodeModel]> in
-            return Observable.create { ob in
-                guard  resp.isOK else {  return Disposables.create { } }
-                if resp.data.count == 0 { TLToast.show("暂无数据") }
-                ob.onNext(resp.data)
-                self.refreshSubject.onNext(.stopRefresh)
-                return Disposables.create {}
-            }
-        }.subscribe {[weak self] event in
-            guard let ev = event.element else {  return }
-            self?.snCodeDevices.accept(ev)
+        self.snCodeDevicesRequest.subscribe {[weak self] event in
+            guard let resp = event.element else { return  }
+            self?.snCodeDevices.accept(resp.data)
             self?.refreshSubject.onNext(.stopRefresh)
         }.disposed(by: bag)
     }
