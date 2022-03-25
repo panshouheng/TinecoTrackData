@@ -24,9 +24,6 @@ PODS:
     - Differentiator (~> 5.0)
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
-  - RxGesture (4.0.3):
-    - RxCocoa (~> 6.0)
-    - RxSwift (~> 6.0)
   - RxReachability (1.2.1):
     - ReachabilitySwift (< 6.0, >= 5.0)
     - RxCocoa (~> 6)
@@ -85,7 +82,6 @@ DEPENDENCIES:
   - RxBiBinding
   - RxBinding
   - RxDataSources
-  - RxGesture
   - RxReachability
   - RxSwiftExt
   - SnapKit
@@ -107,7 +103,6 @@ SPEC REPOS:
     - RxBinding
     - RxCocoa
     - RxDataSources
-    - RxGesture
     - RxReachability
     - RxRelay
     - RxSwift
@@ -132,7 +127,6 @@ SPEC CHECKSUMS:
   RxBinding: e3c76d02d0ee3f1a306a0fb8e8ef6f2eda65a375
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
-  RxGesture: abadd243fc36db74df43dfc893829ddde94f1a3d
   RxReachability: bfd13548bf1dac7a877082d13918a9f39bdb5c18
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
@@ -145,6 +139,6 @@ SPEC CHECKSUMS:
   WCDB.swift: 05d509d7a0e60fb6e11c34eb7e4027c0fab5849f
   WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
 
-PODFILE CHECKSUM: 51146c47d6b34d223fdc976a85c5beeb4e94221d
+PODFILE CHECKSUM: c0746beeda7d8989f7784aecd20ef644eb98b69a
 
 COCOAPODS: 1.11.2

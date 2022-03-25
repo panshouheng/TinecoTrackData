@@ -18,6 +18,5 @@ pod 'NSObject+Rx'
 pod 'RxDataSources'
 pod 'RxBinding'
 pod 'RxBiBinding'
-pod "RxGesture"
 pod 'RxReachability'
 end
